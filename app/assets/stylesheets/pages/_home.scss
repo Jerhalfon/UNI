@@ -1,1 +1,46 @@
 // Specific CSS for your home-page
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  background: #F4F4F4;
+}
+p {
+  font-weight: lighter;
+}
+h1, h2, h3 {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 23px;
+}
+.padded {
+  padding: 30px 0;
+}
+
+.content {
+  padding: 0 200px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content h2 {
+  text-align: center;
+}
+
+.line {
+  height: 1px;
+  width: 80px;
+  background-color: #66A98F;
+}
