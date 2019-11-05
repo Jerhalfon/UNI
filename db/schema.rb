@@ -10,10 +10,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_04_154054) do
+ActiveRecord::Schema.define(version: 2019_11_05_132028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "program_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_favorites_on_program_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "country"
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.text "description"
+    t.integer "duration"
+    t.string "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.bigint "university_id"
+    t.index ["category_id"], name: "index_programs_on_category_id"
+    t.index ["university_id"], name: "index_programs_on_university_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.integer "rating"
+    t.string "title"
+    t.bigint "program_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_reviews_on_program_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "universities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "location_id"
+    t.index ["location_id"], name: "index_universities_on_location_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,4 +84,11 @@ ActiveRecord::Schema.define(version: 2019_11_04_154054) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "favorites", "programs"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "programs", "categories"
+  add_foreign_key "programs", "universities"
+  add_foreign_key "reviews", "programs"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "universities", "locations"
 end
