@@ -6,4 +6,5 @@ class Program < ApplicationRecord
 
   # validations
   validates :name, presence: true
+  validates :university, presence: true
 end

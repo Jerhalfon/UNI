@@ -5,4 +5,6 @@ class Review < ApplicationRecord
 
   # validations
   validates :rating, inclusion: { in: [1, 2, 3, 4, 5] }
+  validates :program, presence: true
+  validates :user, presence: true
 end
