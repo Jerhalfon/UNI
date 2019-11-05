@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Our Programs</h2>
+  <div class="cards">
+    <% @programs.each do |program| %>
+      <div class="card" style="background-image: url(<%=  %>)">
+        <div class="card-description">
+          <h3>program.name</h3>
+          <p>program.description</p>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
