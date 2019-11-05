@@ -5,4 +5,7 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  # validations
+  validates :name, presence: true, uniqueness: true
 end
