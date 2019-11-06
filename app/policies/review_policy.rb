@@ -9,7 +9,7 @@ class ReviewPolicy < ApplicationPolicy
     !user.admin
   end
 
-  def new
+  def new?
     create?
   end
 end

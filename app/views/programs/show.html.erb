@@ -15,7 +15,12 @@
       </ul>
     </div>
     <div class="tab-right">
-      <div class="btn"><%= link_to "Add a review", new_program_review_path(@program) %></div>
+        <% if !user_signed_in? %>
+          <p>you have to login before reviewing</p>
+          <%= link_to "Log in", new_user_session_path %>
+       <% elsif policy(Review).new? %>
+        <div class="btn"><%= link_to "Add a review", new_program_review_path(@program) %></div>
+      <% end %>
     </div>
   </div>
 
