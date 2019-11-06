@@ -4,6 +4,5 @@ class Favorite < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates :program, presence: true
-  validates :user, presence: true
+  validates :program_id, uniqueness: { scope: :user, message: "Already in favorites" }
 end
