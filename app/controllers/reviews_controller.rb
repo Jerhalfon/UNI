@@ -25,8 +25,7 @@ class ReviewsController < ApplicationController
     @review.program = @program
     @review.user = @user
     if @review.save
-      # TODO: change it to index reviewq
-      redirect_to program_path(@program)
+      redirect_to program_reviews_path(@program)
     else
       render :new
     end
