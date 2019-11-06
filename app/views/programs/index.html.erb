@@ -4,7 +4,7 @@
     <% @programs.each do |program| %>
       <div class="card" style="background-image: url(<%=  %>)">
         <div class="card-description">
-          <h3>program.name</h3>
+          <h3><%= link_to program.name, program_path(program) %></h3>
           <p>program.description</p>
         </div>
 
