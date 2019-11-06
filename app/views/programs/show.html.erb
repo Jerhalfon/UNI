@@ -1,0 +1,28 @@
+<div class="university-body">
+  <h1><%= @program.university.name %></h1>
+  <div class="university-image">
+    <span class="change-icon">
+      <i class="far fa-heart"></i>
+      <i class="fas fa-heart"></i>
+    </span>
+  </div>
+
+  <div class="tab">
+    <div class="tab-left">
+      <ul>
+        <li><a href="#">Description</a></li>
+        <li><a href="#">Reviews</a></li>
+      </ul>
+    </div>
+    <div class="tab-right">
+      <div class="btn"><%= link_to "Add a review", new_program_review_path(@program) %></div>
+    </div>
+  </div>
+
+  <div class="university-description">
+    <h2><%= @program.name %></h2>
+    <p><span class="title-bold">Price: </span><%= @program.price %></p>
+    <p><span class="title-bold">Duration: </span><%= @program.duration %> months</p>
+    <p><%= @program.description + @program.description + @program.description + @program.description %></p>
+  </div>
+</div>
