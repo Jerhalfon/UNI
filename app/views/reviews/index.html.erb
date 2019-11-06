@@ -24,10 +24,14 @@
     </div>
   </div>
 
-  <div class="university-description">
-    <h2><%= @program.name %></h2>
-    <p><span class="title-bold">Price: </span><%= @program.price %></p>
-    <p><span class="title-bold">Duration: </span><%= @program.duration %> months</p>
-    <p><%= @program.description + @program.description + @program.description + @program.description %></p>
+  <div class="university-reviews">
+    <% @reviews.each do |review| %>
+      <div class="review">
+        <h3><%= review.title %></h3>
+        <p><span class="title-bold">Rating: </span><%= review.rating %></p>
+        <p><%= review.content %></p>
+      </div>
+    <% end %>
   </div>
 </div>
+
