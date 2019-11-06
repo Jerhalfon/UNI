@@ -3,6 +3,6 @@ class Location < ApplicationRecord
   has_many :universities
 
   # validations
-  validates :country, presence: true, uniqueness: true
+  validates :country, presence: true
   validates :city, presence: true
 end
