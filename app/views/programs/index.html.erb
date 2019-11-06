@@ -6,7 +6,7 @@
           <img src="https://images.unsplash.com/20/cambridge.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1630&q=80" />
           <div class="card-product-infos">
             <h2><%= program.university.name %></h2>
-            <h3><%= program.name%></h3>
+            <h3><%= link_to program.name, program_path(program) %></h3>
             <p><strong>Duration: </strong><%= program.duration %></p>
             <p><strong>Price: </strong><%= program.price %></p>
             <p><%= program.description%></p>
