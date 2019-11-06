@@ -1,5 +1,8 @@
 class ProgramsController < ApplicationController
+  include Pundit
+
   before_action :set_program, only: [:show]
+
   def index
     @programs = Program.all
   end
