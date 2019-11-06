@@ -1,10 +1,13 @@
 <div class="navbar-minimalist">
   <div class="navbar-left">
-  <a href="index.html"><i class="fas fa-graduation-cap"></i></a>
+    <%= link_to root_path do %>
+      <i class="fas fa-graduation-cap"></i>
+    <% end %>
   </div>
   <div class="navbar-right">
     <ul>
-      <a href="#"><li class="green-btn">Login</li></a>
+      <li class="green-btn"><%= link_to 'Login', user_session_path%></li>
+      <li class="green-btn"><%= link_to 'Logout', destroy_user_session_path, method: "delete" %></li>
       <li><i class="far fa-heart"></i></li>
     </ul>
   </div>
