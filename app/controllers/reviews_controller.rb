@@ -1,6 +1,4 @@
 class ReviewsController < ApplicationController
-  include Pundit
-
   before_action :authenticate_user!, except: :index
   after_action :verify_authorized, except: :index
 

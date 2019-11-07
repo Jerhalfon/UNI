@@ -2,8 +2,10 @@
   <h1><%= @program.university.name %></h1>
   <div class="university-image">
     <span class="change-icon">
+      <%= link_to program_favorites_path(@program), method: :post do %>
       <i class="far fa-heart"></i>
       <i class="fas fa-heart"></i>
+      <% end %>
     </span>
   </div>
 
