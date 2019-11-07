@@ -10,6 +10,7 @@
             <p><strong>Duration: </strong><%= program.duration %></p>
             <p><strong>Price: </strong><%= program.price %></p>
             <p><%= program.description%></p>
+            <%= link_to "coeur", program_favorites_path(program), method: :post %>
           </div>
       </div>
     <% end %>

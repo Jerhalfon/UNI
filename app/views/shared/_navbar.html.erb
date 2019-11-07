@@ -8,7 +8,9 @@
     <ul>
       <li class="green-btn"><%= link_to 'Login', user_session_path%></li>
       <li class="green-btn"><%= link_to 'Logout', destroy_user_session_path, method: "delete" %></li>
+      <%= link_to favorites_path do %>
       <li><i class="far fa-heart"></i></li>
+      <% end %>
     </ul>
   </div>
 </div>
