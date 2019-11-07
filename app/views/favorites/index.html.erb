@@ -1,3 +1,18 @@
-<% @favorites.each do |favorite|%>
-<%= favorite.program.name %>
-<% end %>
+<div class="cards-favorite">
+  <% @favorites.each do |favorite|%>
+    <div class="card-favorite">
+      <div class="image-favorite">
+        <!-- image_tag program.university.remote_photo_url -->
+      </div>
+      <div class="card-info-favorite">
+        <h3><%= favorite.program.name %></h3>
+        <div class="favorite-info-intern">
+          <p><%= favorite.program.university.name %> | </p>
+          <p> <%= favorite.program.price %>€ | </p>
+          <p> <%= favorite.program.duration %></p>
+        </div>
+        <p> <%= favorite.program.description[0..100] %>...</p>
+      </div>
+    </div>
+  <% end %>
+</div>
