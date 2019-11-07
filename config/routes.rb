@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :index, :edit, :update, :destroy]
   end
 
-  delete "/programs/:program_id/reviews/:id", to: "reviews#destroy", as: :review_destroy
+
   # resources :universities do
   #   resources :programs, only: [:new, :create, :edit, :update]
   # end
