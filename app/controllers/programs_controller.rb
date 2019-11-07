@@ -4,7 +4,7 @@ class ProgramsController < ApplicationController
   before_action :set_program, only: [:show]
 
   def index
-    @programs = Program.all
+      @programs = Program.all
   end
 
   def show
