@@ -6,4 +6,6 @@ class University < ApplicationRecord
   # validations
   validates :name, presence: true, uniqueness: true
   validates :location, presence: true
+
+  mount_uploader :image, PhotoUploader
 end
