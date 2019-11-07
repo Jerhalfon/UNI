@@ -10,7 +10,12 @@
             <p><strong>Duration: </strong><%= program.duration %></p>
             <p><strong>Price: </strong><%= program.price %></p>
             <p><%= program.description%></p>
+            <% if !user_signed_in? %>
+              <p>you have to login before reviewing</p>
+              <%= link_to "Log in", new_user_session_path %>
+            <% elsif policy(Favorite).create? %>
             <%= link_to "coeur", program_favorites_path(program), method: :post %>
+            <% end %>
           </div>
       </div>
     <% end %>

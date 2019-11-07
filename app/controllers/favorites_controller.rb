@@ -1,7 +1,12 @@
 class FavoritesController < ApplicationController
+  before_action :authenticate_user!
+  include Pundit
+
+  after_action :verify_authorized, except: :index
+  after_action :verify_policy_scoped, only: :index
+
   def index
-    @user = current_user
-    @favorites = Favorite.all.where(user: @user)
+    @favorites = policy_scope(Favorite)
   end
 
   def create
@@ -10,6 +15,7 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.new
     @favorite.program = @program
     @favorite.user = @user
+    authorize @favorite
     @favorite.save
     redirect_to programs_path
   end
