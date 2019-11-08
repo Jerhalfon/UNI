@@ -9,8 +9,11 @@ class ProgramsController < ApplicationController
     @programs = Program.search where: { name: /.*#{name}.*/}
     # , price: price
   end
-
+  
   def show
+  end
+
+  def create
   end
 
   private

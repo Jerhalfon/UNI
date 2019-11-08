@@ -2,12 +2,16 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :programs, only: [:index, :show] do
-    resources :favorites, only: [:create]
-    resources :reviews, only: [:new, :create, :index]
+  resources :favorites, only: [:create]
+  resources :reviews, only: [:new, :create, :index, :edit, :update, :destroy]
   end
-  resources :favorites, only: [:index]
+  resources :favorites, only: [:index, :destroy]
 
-
+  namespace :admin do
+    resources :universities, only: [:index, :new, :create] do
+      resources :programs, only: [:new, :create]
+    end
+  end
   # resources :universities do
   #   resources :programs, only: [:new, :create, :edit, :update]
   # end
