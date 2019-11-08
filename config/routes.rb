@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   end
   resources :favorites, only: [:index, :destroy]
 
+  namespace :admin do
+    resources :universities, only: [:index, :new, :create] do
+      resources :programs, only: [:new, :create]
+    end
+  end
   # resources :universities do
   #   resources :programs, only: [:new, :create, :edit, :update]
   # end
