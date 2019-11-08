@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :programs, only: [:index, :show] do
-    resources :reviews, only: [:new, :create, :index, :edit, :update, :destroy]
+  resources :favorites, only: [:create]
+  resources :reviews, only: [:new, :create, :index, :edit, :update, :destroy]
   end
-
+  resources :favorites, only: [:index]
 
   # resources :universities do
   #   resources :programs, only: [:new, :create, :edit, :update]

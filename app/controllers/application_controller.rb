@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_devise_redirect_path, unless: :devise_controller?
+  include Pundit
 
   def set_devise_redirect_path
     cookies[:redirect_path] = request.path
