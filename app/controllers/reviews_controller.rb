@@ -22,8 +22,11 @@ class ReviewsController < ApplicationController
     authorize @review
     @review.program = @program
     @review.user = @user
+
+    @show_reviews = true
+
     if @review.save
-      redirect_to program_reviews_path(@program)
+      render 'programs/show'
     else
       render :new
     end

@@ -1,21 +1,24 @@
 <div class="university-body">
   <h1><%= @program.university.name %></h1>
   <div class="university-image">
-    <span class="change-icon">
-      <%= link_to program_favorites_path(@program), method: :post do %>
-      <i class="far fa-heart"></i>
-      <i class="fas fa-heart"></i>
-      <% end %>
-    </span>
+    <%= link_to program_favorites_path(@program), method: :post do %>
+      <span class="change-icon">
+        <i class="far fa-heart"></i>
+        <i class="fas fa-heart"></i>
+      </span>
+    <% end %>
   </div>
 
   <div class="tab">
     <div class="tab-left">
-      <ul>
-        <li><%= link_to 'Description', program_path(@program) %></li>
-        <li><%= link_to 'Reviews', program_reviews_path(@program) %></li>
-      </ul>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link <%= 'show active' unless @show_reviews %>" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
+          <a class="nav-item nav-link <%= 'show active' if @show_reviews %>" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Reviews</a>
+        </div>
+      </nav>
     </div>
+
     <div class="tab-right">
         <% if !user_signed_in? %>
           <p>you have to login before reviewing</p>
@@ -27,9 +30,29 @@
   </div>
 
   <div class="university-description">
-    <h2><%= @program.name %></h2>
-    <p><span class="title-bold">Price: </span><%= @program.price %></p>
-    <p><span class="title-bold">Duration: </span><%= @program.duration %> months</p>
-    <p><%= @program.description + @program.description + @program.description + @program.description %></p>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade <%= 'show active' unless @show_reviews %>" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <h2><%= @program.name %></h2>
+          <p><span class="title-bold">Price: </span><%= @program.price %></p>
+          <p><span class="title-bold">Duration: </span><%= @program.duration %> months</p>
+          <p><%= @program.description + @program.description + @program.description + @program.description %></p>
+
+      </div>
+      <div class="tab-pane fade <%= 'show active' if @show_reviews %>" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="university-reviews">
+          <% if @program.reviews.empty? %>
+            <p id="no-review"> No reviews yet be the first </p>
+          <% else %>
+            <% @program.reviews.each do |review| %>
+              <div class="review">
+                <h3><%= review.title %></h3>
+                <p><span class="title-bold">Rating: </span><%= review.rating %></p>
+                <p><%= review.content %></p>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
