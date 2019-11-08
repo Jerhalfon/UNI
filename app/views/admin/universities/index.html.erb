@@ -1,0 +1,4 @@
+<h1>Which university are you from?</h1>
+<% @universities.each do |university| %>
+<p><%= link_to university.name, new_admin_university_program_path(university)%></p>
+<% end %>

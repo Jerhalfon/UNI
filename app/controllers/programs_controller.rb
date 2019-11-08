@@ -11,6 +11,10 @@ class ProgramsController < ApplicationController
 
   end
 
+  def create
+
+  end
+
   private
 
   def set_program

@@ -7,13 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "creating data"
 
-Favorite.delete_all
-Review.delete_all
-Program.delete_all
-University.delete_all
-Location.delete_all
-Category.delete_all
-User.delete_all
+# Favorite.delete_all
+# Review.delete_all
+# Program.delete_all
+# University.delete_all
+# Location.delete_all
+# Category.delete_all
+# User.delete_all
 
 
 loca1 = Location.create(country: "Belgium", city: "Brussels")
