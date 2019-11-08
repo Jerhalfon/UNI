@@ -7,29 +7,17 @@
 </div>
 
 <div class="body-home">
-  <h2>Find programs</h2>
-  <div class="line"></div>
-  <div class="section-inputs">
-    <div class="input-column">
-      <input type="text" placeholder="Course">
-      <input type="text" placeholder="City/Country/university">
-      <input type="text" placeholder="Degree">
-      <input type="text" placeholder="Maximum price">
-    </div>
-    <div class="input-column">
-      <input type="text" placeholder="Duration">
-      <input type="text" placeholder="City/Country/university">
-      <input type="text" placeholder="Degree">
-      <input type="text" placeholder="Maximum price">
-    </div>
-    <div class="input-column">
-      <input type="text" placeholder="Course">
-      <input type="text" placeholder="City/Country/university">
-      <input type="text" placeholder="Degree">
-      <input type="text" placeholder="Maximum price">
-    </div>
-    <%= link_to 'Search', programs_path, class: "btn-search" %>
-  </div>
+<%= simple_form_for @program, method: :get, url: programs_path do |f| %>
+  <%= f.input :name %>
+<!--   <%#= f.input :price %>
+ --><!--   <%#= f.association :university %>
+  <%#= f.simple_fields_for University.new do |uf| %>
+    <%#= uf.association :location %> -->
+  <% end %>
+  <%= f.submit "Search", value: "search" %>
+<% end %>
+
+
 
   <div class="topics-section">
   <h2>The topics</h2>
