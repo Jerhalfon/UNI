@@ -1,18 +1,25 @@
-<div class="cards-favorite">
-  <% @favorites.each do |favorite|%>
-    <div class="card-favorite">
-      <div class="image-favorite">
-        <!-- image_tag program.university.remote_photo_url -->
-      </div>
-      <div class="card-info-favorite">
-        <h3><%= favorite.program.name %></h3>
-        <div class="favorite-info-intern">
-          <p><%= favorite.program.university.name %> | </p>
-          <p> <%= favorite.program.price %>€ | </p>
-          <p> <%= favorite.program.duration %></p>
+<% if @favorites.empty? %>
+  <p id="no-favorite"> No favorites yet </p>
+<% else %>
+  <div class="cards-favorite">
+    <% @favorites.each do |favorite|%>
+      <div class="card-favorite" id="favorite-<%= favorite.id %>">
+        <div class="image-favorite">
+          <%= link_to favorite_path(favorite), method: :delete, remote: true, class: 'delete-favorite delete-favorite-icon' do %>
+              <i class="fas fa-times"></i>
+          <% end %>
+          <!-- image_tag program.university.remote_photo_url -->
         </div>
-        <p> <%= favorite.program.description[0..100] %>...</p>
+        <div class="card-info-favorite">
+          <h3><%= link_to favorite.program.name, program_path(favorite.program) %></h3>
+          <div class="favorite-info-intern">
+            <p><%= favorite.program.university.name %> | </p>
+            <p> <%= favorite.program.price %>€/year | </p>
+            <p> <%= favorite.program.duration %> months</p>
+          </div>
+          <p> <%= favorite.program.description[0..100] %>...</p>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
