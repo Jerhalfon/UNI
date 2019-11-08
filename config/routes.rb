@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :favorites, only: [:create]
   resources :reviews, only: [:new, :create, :index, :edit, :update, :destroy]
   end
-  resources :favorites, only: [:index]
+  resources :favorites, only: [:index, :destroy]
 
   # resources :universities do
   #   resources :programs, only: [:new, :create, :edit, :update]
