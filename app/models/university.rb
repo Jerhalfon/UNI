@@ -6,4 +6,8 @@ class University < ApplicationRecord
   # validations
   validates :name, presence: true, uniqueness: true
   validates :location, presence: true
+
+  # geocode
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end

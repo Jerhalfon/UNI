@@ -12,9 +12,9 @@ loca2 = Location.create(country: "Belgium", city: "Antwerp")
 loca3 = Location.create(country: "Belgium", city: "Namur")
 loca4 = Location.create(country: "England", city: "London")
 
-uni1 = University.create(name: "ULB", location: loca1 )
-uni2 = University.create(name: "UA", location: loca2 )
-uni3 = University.create(name: "UN", location: loca3 )
+uni1 = University.create(name: "ULB", location: loca1, address: "Avenue Franklin Roosevelt 50, 1050 Bruxelles")
+uni2 = University.create(name: "UA", location: loca2, address: "Prinsstraat 13, 2000 Antwerpen")
+uni3 = University.create(name: "UN", location: loca3, address: "Place de Londres 9, 1050 Ixelles")
 
 cat1 = Category.create(name: "Business")
 cat2 = Category.create(name: "Law")
