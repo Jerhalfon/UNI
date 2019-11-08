@@ -27,6 +27,13 @@
   display: flex;
   align-items: center;
   margin-top: 20px;
+  position: relative;
+
+  .change-icon-programs {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .card-product img {
