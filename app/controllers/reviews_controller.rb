@@ -56,8 +56,8 @@ class ReviewsController < ApplicationController
   def destroy
     @program = Program.find(params[:program_id])
     @review = Review.find(params[:id])
-    @review.destroy
     authorize @review
+    @review.destroy
 
     redirect_to program_reviews_path(@program)
   end
