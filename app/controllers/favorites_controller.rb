@@ -19,4 +19,15 @@ class FavoritesController < ApplicationController
     @favorite.save
     redirect_to programs_path
   end
+
+  def destroy
+    @favorite = Favorite.find(params[:id])
+    @favorite_id = @favorite.id
+    @favorite.destroy
+    authorize @favorite
+    respond_to do |format|
+      format.html { redirect_to favorites_path }
+      format.js
+    end
+  end
 end
