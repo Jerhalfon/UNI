@@ -7,15 +7,17 @@
   <div class="navbar-right">
     <ul>
       <% if !user_signed_in? %>
+        <li class="green-btn"><%= link_to 'Login', new_user_session_path%></li>
         <%= link_to new_user_session_path do %>
         <li><i class="far fa-heart"></i></li>
         <% end %>
           <%#= link_to "Log in", new_user_session_path %>
-        <li class="green-btn"><%= link_to 'Login', new_user_session_path%></li>
        <% elsif policy(Favorite).create? %>
         <%= link_to favorites_path do %>
         <li><i class="far fa-heart"></i></li>
         <% end %>
+         <li class="green-btn"><%= link_to 'Logout', destroy_user_session_path, method: "delete" %></li>
+        <% else %>
         <li class="green-btn"><%= link_to 'Logout', destroy_user_session_path, method: "delete" %></li>
       <% end %>
     </ul>
