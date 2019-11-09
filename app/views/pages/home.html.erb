@@ -13,10 +13,9 @@
  --><!--   <%#= f.association :university %>
   <%#= f.simple_fields_for University.new do |uf| %>
     <%#= uf.association :location %> -->
-  <% end %>
   <%= f.submit "Search", value: "search" %>
 <% end %>
-
+<%= link_to "Add a program", admin_universities_path(:admin) %>
 
 
   <div class="topics-section">

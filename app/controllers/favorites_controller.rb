@@ -17,7 +17,7 @@ class FavoritesController < ApplicationController
     @favorite.user = @user
     authorize @favorite
     @favorite.save
-    redirect_to programs_path
+    redirect_back(fallback_location: programs_path)
   end
 
   def destroy

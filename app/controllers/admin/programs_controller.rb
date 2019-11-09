@@ -11,7 +11,7 @@ class Admin::ProgramsController < ApplicationController
     @program.university = @university
     @program.category = @category
     if @program.save
-      redirect_to new_admin_university_program_path(@university)
+      redirect_to root_path
     else
       render :new
     end
