@@ -1,7 +1,8 @@
-<h1>Add a new University</h1>
+<div class="body-review">
+  <div class="form-review">
+    <h1>Add a new University</h1>
 
-<%= simple_form_for([:admin, @university]) do |f| %>
-
+    <%= simple_form_for([:admin, @university]) do |f| %>
   <div class="form-inputs">
     <%= f.input :name,
                 required: true,
@@ -10,9 +11,12 @@
                 as: :select,
                 label_method: :city_and_country,
                 value_method: :id %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Submit"%>
+      <div class="form-actions">
+        <%= f.button :submit, "Submit"%>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

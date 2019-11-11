@@ -18,6 +18,6 @@ class Admin::UniversitiesController < ApplicationController
   private
 
   def uni_params
-    params.require(:university).permit(:name, :location_id)
+    params.require(:university).permit(:name, :location_id, :photo)
   end
 end

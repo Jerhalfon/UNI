@@ -1,6 +1,20 @@
-<%= simple_form_for @university, method: :get, url: new_admin_university_program_path(@university) do |f| %>
-  <%= f.input :name, collection: @universities %>
-  <%= f.submit "Search", value: "search" %>
-<% end %>
+<div class="form-list-uni">
+  <h1>Which university are you from?</h1>
+    <select name="university_id" id="university_id" class="university-input-option">
+      <% @universities.each do |university| %>
+        <option value=<%= new_admin_university_program_path(university) %> ><%= link_to university.name, new_admin_university_program_path(university)%></option>
+      <% end %>
+    </select>
+      <div class="uni-programs-btn">
+      <button  id="click_new_program">Submit</button>
+      <%= link_to "add new uni", new_admin_university_path %>
+    </div>
+</div>
 
-<%= link_to "create", new_admin_university_path  %>
+<script>
+  document.querySelector("#click_new_program").addEventListener("click" , () => {
+     window.location = document.querySelector("#university_id").value;
+
+  })
+</script>
+
