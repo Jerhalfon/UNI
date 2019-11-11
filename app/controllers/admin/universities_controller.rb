@@ -1,10 +1,12 @@
 class Admin::UniversitiesController < ApplicationController
   def index
     @universities = University.all
+    @university = University.first
   end
 
   def new
     @university = University.new
+     authorize([:admin, @university])
   end
 
   def create

@@ -1,5 +1,6 @@
-<h1>Which university are you from?</h1>
-<% @universities.each do |university| %>
-<p><%= link_to university.name, new_admin_university_program_path(university)%></p>
+<%= simple_form_for @university, method: :get, url: new_admin_university_program_path(@university) do |f| %>
+  <%= f.input :name, collection: @universities %>
+  <%= f.submit "Search", value: "search" %>
 <% end %>
-<%= link_to "add new uni", new_admin_university_path %>
+
+<%= link_to "create", new_admin_university_path  %>

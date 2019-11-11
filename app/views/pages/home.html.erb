@@ -15,7 +15,12 @@
     <%#= uf.association :location %> -->
   <%= f.submit "Search", value: "search" %>
 <% end %>
-<%= link_to "Add a program", admin_universities_path(:admin) %>
+<% if !user_signed_in? %>
+<% elsif current_user.admin == true %>
+  <%= link_to "Add a program", admin_universities_path(:admin) %>
+<% else %>
+<% end %>
+
 
 
   <div class="topics-section">
