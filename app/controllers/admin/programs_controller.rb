@@ -2,6 +2,7 @@ class Admin::ProgramsController < ApplicationController
   def new
     @university = University.find(params[:university_id])
     @program = Program.new
+    authorize([:admin, @program])
   end
 
   def create
@@ -10,6 +11,7 @@ class Admin::ProgramsController < ApplicationController
     @program = Program.new(program_params)
     @program.university = @university
     @program.category = @category
+    authorize([:admin, @program])
     if @program.save
       redirect_to root_path
     else
