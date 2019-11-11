@@ -21,14 +21,19 @@ loca2 = Location.create(country: "Belgium", city: "Antwerp")
 loca3 = Location.create(country: "Belgium", city: "Namur")
 loca4 = Location.create(country: "England", city: "London")
 
+url1 = "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
 uni1 = University.create(name: "ULB", location: loca1)
-uni1.remote_photo_url = "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+uni1.remote_photo_url = url1
 uni1.save
+
+url2 = "https://images.unsplash.com/photo-1537888692311-8a7fb3e9f374?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"
 uni2 = University.create(name: "Universiteit van Antwerpen", location: loca2)
-uni2.remote_photo_url = "https://images.unsplash.com/photo-1537888692311-8a7fb3e9f374?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"
+uni2.remote_photo_url = url2
 uni2.save
+
+url3 = "https://images.unsplash.com/photo-1474650919751-b7e21a1b180f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1650&q=80"
 uni3 = University.create(name: "Université de Namur", location: loca3)
-uni3.remote_photo_url = "https://images.unsplash.com/photo-1474650919751-b7e21a1b180f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1650&q=80"
+uni3.remote_photo_url = url3
 uni3.save
 
 cat1 = Category.create(name: "Business")
