@@ -32,12 +32,13 @@
           <h3><%= review.title %></h3>
           <p><span class="title-bold">Rating: </span><%= review.rating %></p>
           <p><%= review.content %></p>
-        </div>
-        <% end %>
   <% if current_user == review.user %>
         <%= link_to "Edit your review", edit_program_review_path(@program, review) %>
         <%= link_to "Delete your review", program_review_path(@program, review), method: :delete %>
+        <% end %>
+</div>
       <% end %>
+
     <% end %>
   </div>
 </div>
