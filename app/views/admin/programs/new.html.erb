@@ -1,27 +1,31 @@
-<h1>Add a new Program</h1>
+<div class="body-review">
+  <div class="form-review">
+    <h1>Add a new Program</h1>
 
-<%= simple_form_for([:admin, @university, @program]) do |f| %>
+    <%= simple_form_for([:admin, @university, @program]) do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :name,
-                required: true,
-                input_html: { autocomplete: "Name" }%>
-    <%= f.input :price,
-                required: true,
-                input_html: { autocomplete: "Price" } %>
-    <%= f.input :description,
-                required: true,
-                input_html: { autocomplete: "Description" } %>
-    <%= f.input :duration,
-                required: true,
-                input_html: { autocomplete: "Duration" } %>
-    <%= f.input :level,
-                required: true,
-                input_html: { autocomplete: "Level" } %>
-    <%= f.association :category %>
+      <div class="form-inputs">
+        <%= f.input :name,
+                    required: true,
+                    input_html: { autocomplete: "Name" }%>
+        <%= f.input :price,
+                    required: true,
+                    input_html: { autocomplete: "Price" } %>
+        <%= f.input :description,
+                    required: true,
+                    input_html: { autocomplete: "Description" } %>
+        <%= f.input :duration,
+                    required: true,
+                    input_html: { autocomplete: "Duration" } %>
+        <%= f.input :level,
+                    required: true,
+                    input_html: { autocomplete: "Level" } %>
+        <%= f.association :category %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Submit" %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Submit" %>
-  </div>
-<% end %>
+</div>
