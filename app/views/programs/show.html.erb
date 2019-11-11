@@ -1,6 +1,6 @@
 <div class="university-body">
   <h1><%= @program.university.name %></h1>
-  <div class="university-image">
+  <div class="university-image" style="background-image: url('<%= cl_image_path @program.university.photo %>')">
     <%= link_to program_favorites_path(@program), method: :post do %>
       <span class="change-icon">
         <i class="far fa-heart"></i>

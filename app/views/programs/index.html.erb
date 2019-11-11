@@ -11,17 +11,16 @@
             </span>
           <% end %>
 
-          <%= image_tag program.university.remote_photo_url %>
+
           <div class="card-product-infos">
-            <h2><%= program.university.name %></h2>
-            <h3><%= link_to program.name, program_path(program) %></h3>
-            <p><strong>Duration: </strong><%= program.duration %></p>
-            <p><strong>Price: </strong><%= program.price %></p>
-            <p><%= program.description%></p>
-            <% if !user_signed_in? %>
-              <p>you have to login before reviewing</p>
-              <%= link_to "Log in", new_user_session_path %>
-            <% end %>
+            <div class="card-product-img" style="background-image: url('<%= cl_image_path program.university.photo %>')"></div>
+            <div class="card-product-right">
+              <h2><%= program.university.name %></h2>
+              <h3><%= link_to program.name, program_path(program) %></h3>
+              <p><strong>Duration: </strong><%= program.duration %></p>
+              <p><strong>Price: </strong><%= program.price %></p>
+              <p><%= program.description%></p>
+            </div>
           </div>
       </div>
     <% end %>
