@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 puts "> creating data"
+
 
 Favorite.delete_all
 Review.delete_all
@@ -634,8 +636,6 @@ Program.create( university: uni4,
 It is up to the programme director to agree all requests for exemption, equivalences between different subjects and entry by means of a special personal file. She is also responsible for agreeing the individual programme of each student.",
                         language:  ["English", "French"])
 
-
-=======
 Program.create( university: uni1,
                 category: cat1,
                 name: "Master in Business Engineering",
@@ -1021,10 +1021,6 @@ Program.create( university: uni1,
                 student_profile: "",
                 admission_requirements: "",
                 language: "French" )
-
-
-
-
 
 
 user1 = User.create(email: "user1@email.com", password: "123456")
