@@ -20,6 +20,7 @@ loca1 = Location.create(country: "Belgium", city: "Brussels")
 loca2 = Location.create(country: "Belgium", city: "Antwerp")
 loca3 = Location.create(country: "Belgium", city: "Namur")
 loca4 = Location.create(country: "England", city: "London")
+loca5 = Location.create(country: "Belgium", city: "Leuven")
 
 url1 = "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
 uni1 = University.create(name: "ULB", location: loca1)
@@ -36,20 +37,84 @@ uni3 = University.create(name: "Université de Namur", location: loca3)
 uni3.remote_photo_url = url3
 uni3.save
 
-cat1 = Category.create(name: "Business")
-cat2 = Category.create(name: "Law")
-cat3 = Category.create(name: "Others")
 
 
-prog1 = Program.create(university: uni1, category: cat1, name: "Business Administration", price: "0", level: "Undergraduate", duration: "24", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog2 = Program.create(university: uni2, category: cat2, name: "European Law", price: "69", level: "Undergraduate", duration: "12", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog3 = Program.create(university: uni3, category: cat2, name: "International Law", price: "69", level: "Undergraduate", duration: "12", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog4 = Program.create(university: uni1, category: cat2, name: "Belgian Law", price: "100", level: "Undergraduate", duration: "12", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog5 = Program.create(university: uni2, category: cat2, name: "European Law", price: "69", level: "Undergraduate", duration: "12", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog6 = Program.create(university: uni3, category: cat3, name: "International Relations", price: "420", level: "Graduate", duration: "24", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog7 = Program.create(university: uni2, category: cat2, name: "Fiscal Law", price: "200", level: "Undergraduate", duration: "12", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog8 = Program.create(university: uni2, category: cat2, name: "French Law", price: "0", level: "Undergraduate", duration: "12", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
+cat1 = Category.create(name: "Economics and Business")
+cat2 = Category.create(name: "Theology and Religious Studies")
+cat3 = Category.create(name: "Philosophy")
+cat4 = Category.create(name: "Law")
+cat5 = Category.create(name: "Human and Social Sciences")
+cat6 = Category.create(name: "Arts")
+cat7 = Category.create(name: "Psychology and Educational Sciences")
+cat8 = Category.create(name: "Science")
+cat9 = Category.create(name: "Engineering Science")
+cat10 = Category.create(name: "Bioscience")
+cat11 = Category.create(name: "Architecture")
+cat12 = Category.create(name: "Medicine")
+cat13 = Category.create(name: "Movement and Rehabilitation Sciences")
+cat14 = Category.create(name: "Pharmaceutical")
+cat15 = Category.create(name: "Public Health")
 
+
+prog1 = Program.create( university: uni1,
+                        category: cat1,
+                        name: "Business Administration",
+                        price: "0",
+                        level: "Undergraduate",
+                        duration: "24",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
+prog2 = Program.create( university: uni2,
+                        category: cat2,
+                        name: "European Law",
+                        price: "69",
+                        level: "Undergraduate",
+                        duration: "12",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
+prog3 = Program.create( university: uni3,
+                        category: cat2,
+                        name: "International Law",
+                        price: "69",
+                        level: "Undergraduate",
+                        duration: "12",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
+prog4 = Program.create( university: uni1,
+                        category: cat2,
+                        name: "Belgian Law",
+                        price: "100",
+                        level: "Undergraduate",
+                        duration: "12",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
+prog5 = Program.create( university: uni2,
+                        category: cat2,
+                        name: "European Law", price: "69",
+                        level: "Undergraduate",
+                        duration: "12",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
+prog6 = Program.create( university: uni3,
+                        category: cat3,
+                        name: "International Relations",
+                        price: "420",
+                        level: "Graduate",
+                        duration: "24",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
+prog7 = Program.create( university: uni2,
+                        category: cat2,
+                        name: "Fiscal Law",
+                        price: "200",
+                        level: "Undergraduate",
+                        duration: "12",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
+prog8 = Program.create( university: uni2,
+                        category: cat2,
+                        name: "French Law",
+                        price: "0",
+                        level: "Undergraduate",
+                        duration: "12",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
+                        application_deadline:
+                        student_profile:
+                        admission_requirements:
+                        language:
 
 
 user1 = User.create(email: "user1@email.com", password: "123456")
