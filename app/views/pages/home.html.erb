@@ -10,7 +10,9 @@
 <%= simple_form_for @program, method: :get, url: programs_path do |f| %>
   <%= f.input :name %>
   <%= range_field_tag :price, in: 1..100, :label => "price" %>
-  <%= f.association :university %>
+ <%= f.association :category %>
+  <%= f.input :duration, collection: @duration %>
+  <%= f.input :level, collection: @levels %>
   <%= f.simple_fields_for University.new do |uf| %>
     <%= uf.association :location %>
   <% end %>
