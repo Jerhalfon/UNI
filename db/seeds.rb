@@ -64,62 +64,6 @@ cat15 = Category.create(name: "Computer Science and IT")
 
 
 
-prog1 = Program.create( university: uni1,
-                        category: cat1,
-                        name: "Business Administration",
-                        price: 0,
-                        level: "Undergraduate",
-                        duration: "24",
-                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog2 = Program.create( university: uni2,
-                        category: cat2,
-                        name: "European Law",
-                        price: "69",
-                        level: "Undergraduate",
-                        duration: "12",
-                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog3 = Program.create( university: uni3,
-                        category: cat2,
-                        name: "International Law",
-                        price: "69",
-                        level: "Undergraduate",
-                        duration: "12",
-                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog4 = Program.create( university: uni1,
-                        category: cat2,
-                        name: "Belgian Law",
-                        price: "100",
-                        level: "Undergraduate",
-                        duration: "12",
-                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog5 = Program.create( university: uni2,
-                        category: cat2,
-                        name: "European Law", price: "69",
-                        level: "Undergraduate",
-                        duration: "12",
-                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog6 = Program.create( university: uni3,
-                        category: cat3,
-                        name: "International Relations",
-                        price: "420",
-                        level: "Graduate",
-                        duration: "24",
-                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-prog7 = Program.create( university: uni2,
-                        category: cat2,
-                        name: "Fiscal Law",
-                        price: "",
-                        level: "Undergraduate",
-                        duration: "12",
-                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
-
-prog8 = Program.create( university: uni2,
-                        category: cat2,
-                        name: "French Law",
-                        price: "0",
-                        level: "Undergraduate",
-                        duration: "12",
-                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?")
 
 # programs at UCL
 
@@ -939,7 +883,7 @@ Program.create( university: uni1,
                 price: 0,
                 level: "Master",
                 duration: 24,
-                description: "/",
+                description: "",
                 application_deadline: "September 30th, 2020",
                 student_profile: "",
                 admission_requirements: "",
@@ -949,7 +893,7 @@ Program.create( university: uni1,
                 name: "Master in Medecine, Professional focus",
                 price: 0,
                 level: "Master",
-                duration: "36",
+                duration: 36,
                 description: "The major aim of the ULB's Master in Medicine is to provide scientific and professional training in order to produce highly skilled doctors with a sense of integrity and a profound understanding of human considerations. Students learn about their future career through contact with experienced practitioners right from the outset. The course gives successful graduates legally recognised access to the profession and provides them with the necessary skills to allow them to seek work in a broad range of fields,",
                 application_deadline: "September 30th, 2020",
                 student_profile: "",
@@ -1009,7 +953,8 @@ Program.create( university: uni1,
                 application_deadline: "September 30th, 2020",
                 student_profile: "",
                 admission_requirements: "",
-                language: ["French", "English"] )
+                language: ["French", "English"]
+)
 Program.create( university: uni1,
                 category: cat15,
                 name: "Master in Public Health",
@@ -1020,19 +965,20 @@ Program.create( university: uni1,
                 application_deadline: "September 30th, 2020",
                 student_profile: "",
                 admission_requirements: "",
-                language: "French" )
+                language: "French"
+)
 
 
 user1 = User.create(email: "user1@email.com", password: "123456")
 user2 = User.create(email: "user2@email.com", password: "123456")
 user3 = User.create(email: "user3@email.com", password: "123456")
 
-favo1 = Favorite.create(user: user1, program: prog1)
-favo2 = Favorite.create(user: user1, program: prog2)
+# favo1 = Favorite.create(user: user1, program: prog1)
+# favo2 = Favorite.create(user: user1, program: prog2)
 
-review1 = Review.create(content: "This university has the worst professors don't apply here!", rating: 1, title: "prog1 review", program: prog1, user: user1)
-review2 = Review.create(content: "Really cool University! Recomended ^^", rating: 5, title: "prog2 review", program: prog2, user: user2)
-review3 = Review.create(content: "Good professors but reaaaly boring!", rating: 3, title: "prog3 review", program: prog3, user: user3)
+# review1 = Review.create(content: "This university has the worst professors don't apply here!", rating: 1, title: "prog1 review", program: prog1, user: user1)
+# review2 = Review.create(content: "Really cool University! Recomended ^^", rating: 5, title: "prog2 review", program: prog2, user: user2)
+# review3 = Review.create(content: "Good professors but reaaaly boring!", rating: 3, title: "prog3 review", program: prog3, user: user3)
 
 puts "> data ready"
 

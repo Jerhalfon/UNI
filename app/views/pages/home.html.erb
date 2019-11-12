@@ -14,7 +14,10 @@
   <%= f.input :duration, collection: @duration %>
   <%= f.input :level, collection: @levels %>
   <%= f.simple_fields_for University.new do |uf| %>
-    <%= uf.association :location %>
+  <%= uf.association :location,
+                as: :select,
+                label_method: :city_and_country,
+                value_method: :id %>
   <% end %>
   <%= f.submit "Search", value: "search" %>
 <% end %>
@@ -23,8 +26,6 @@
   <%= link_to "Add a program", admin_universities_path(:admin) %>
 <% else %>
 <% end %>
-
-
 
   <div class="topics-section">
   <h2>The topics</h2>
