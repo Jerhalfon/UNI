@@ -5,8 +5,11 @@ class ProgramsController < ApplicationController
 
   def index
     name = params[:program][:name]
-    price = params[:program][:price] || (1..1000000)
-    @programs = Program.search where: { name: /.*#{name}.*/}
+    price = params[:price] == "" ? [1, 1_000_000_000] : [params[:price]]
+    uni = params[:program][:university_id] == "" ? [1, 1_000_000_000] : [params[:program][:university_id]]
+
+    @programs = Program.search where: { name: /.*#{name}.*/, university_id: { all: uni }, price: { all: price } }
+    raise
     # , price: price
   end
 

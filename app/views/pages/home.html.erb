@@ -9,10 +9,11 @@
 <div class="body-home">
 <%= simple_form_for @program, method: :get, url: programs_path do |f| %>
   <%= f.input :name %>
-<!--   <%#= f.input :price %>
- --><!--   <%#= f.association :university %>
-  <%#= f.simple_fields_for University.new do |uf| %>
-    <%#= uf.association :location %> -->
+  <%= range_field_tag :price, in: 1..100, :label => "price" %>
+  <%= f.association :university %>
+  <%= f.simple_fields_for University.new do |uf| %>
+    <%= uf.association :location %>
+  <% end %>
   <%= f.submit "Search", value: "search" %>
 <% end %>
 <% if !user_signed_in? %>
