@@ -37,6 +37,7 @@
 
 .favorite-info-intern {
   display: flex;
+  flex-direction: column;
 }
 
 .delete-favorite {
@@ -55,5 +56,17 @@
 
   i {
     position: absolute;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-favorite {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .cards-favorite {
+    grid-template-columns: 1fr;
   }
 }
