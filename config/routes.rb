@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       resources :programs, only: [:new, :create]
     end
   end
+
+
   # resources :universities do
   #   resources :programs, only: [:new, :create, :edit, :update]
   # end
