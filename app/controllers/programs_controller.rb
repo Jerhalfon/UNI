@@ -11,7 +11,6 @@ class ProgramsController < ApplicationController
     category = params[:program][:category_id] == "" ? (0..100).to_a : (params[:program][:category_id].to_i)
     duration = params[:program][:duration] == "" ? (0..150).to_a : (0..delete_month(params[:program][:duration])).to_a
     level = params[:program][:duration] == "" ? ["Bachelor", "Master"] : [params[:program][:duration]]
-raise
     @programs = Program.search where: { name: /.*#{name}.*/, price: price, category_id: category, duration: duration, level: level }
 
     unless location_id == ""
