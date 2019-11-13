@@ -8,7 +8,6 @@ class MbtisController < ApplicationController
   end
 
   def intermediary
-
     description = params[:mbti][:name]
     File.open("app/views/mbtis/intermediary.html.erb", 'w') { |file| file.write(description) }
     redirect_to personnality_path
