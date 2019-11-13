@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   get 'description', to: 'mbtis#description'
 
-  get 'personality', to: 'mbtis#personality'
+  get 'intermediary', to: 'mbtis#intermediary'
+
+  get 'personnality', to: 'mbtis#personnality'
 
   resources :mbtis, only: :new do
     resources :categories, only: [:index]
