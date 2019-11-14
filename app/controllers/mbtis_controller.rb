@@ -31,7 +31,11 @@ class MbtisController < ApplicationController
       raw_scores: true
     )
     result = JSON.pretty_generate(profile.result)
-  raise
+    newresult = JSON.parse(result)
+
+    bryan = [true, true, true, true]
+    @my_mbti = (Mbti.where(combination: bryan)).first
+
     end
   end
 end

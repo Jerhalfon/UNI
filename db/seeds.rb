@@ -16,6 +16,8 @@ University.delete_all
 Location.delete_all
 Category.delete_all
 User.delete_all
+Match.delete_all
+Mbti.delete_all
 
 
 loca1 = Location.create(country: "Belgium", city: "Brussels")
@@ -982,22 +984,22 @@ user3 = User.create(email: "user3@email.com", password: "123456")
 # review3 = Review.create(content: "Good professors but reaaaly boring!", rating: 3, title: "prog3 review", program: prog3, user: user3)
 
 
-mbti1 = Mbti.create(name: "Realist")
-mbti2 = Mbti.create(name: "Hard worker")
-mbti3 = Mbti.create(name: "Gregarious traditionalist")
-mbti4 = Mbti.create(name: "Modest and dertermined worker")
-mbti5 = Mbti.create(name: "Pragmatist")
-mbti6 = Mbti.create(name: "Straightforward and honest people")
-mbti7 = Mbti.create(name: "Lively and playful people")
-mbti8 = Mbti.create(name: "Warm and sensitive people")
-mbti9 = Mbti.create(name: "Natural leaders")
-mbti10 = Mbti.create(name: "Creative perfectionist")
-mbti11 = Mbti.create(name: "People-lover")
-mbti12 = Mbti.create(name: "Thoughtful and creative people")
-mbti13 = Mbti.create(name: "Enterprising creative people")
-mbti14 = Mbti.create(name: "Independent and problem-solver")
-mbti15 = Mbti.create(name: "Curious and confident ")
-mbti16 = Mbti.create(name: "Sensitive idealist")
+mbti1 = Mbti.create(name: "Realist", combination: [false, true, true, true])
+mbti2 = Mbti.create(name: "Hard worker", combination: [true, true, true, true])
+mbti3 = Mbti.create(name: "Gregarious traditionalist", combination: [false, true, false, true])
+mbti4 = Mbti.create(name: "Modest and dertermined worker", combination: [true, true, false, true])
+mbti5 = Mbti.create(name: "Pragmatist", combination: [false, true, true, false])
+mbti6 = Mbti.create(name: "Straightforward and honest people", combination: [true, true, true, false])
+mbti7 = Mbti.create(name: "Lively and playful people", combination: [false, true, false, false])
+mbti8 = Mbti.create(name: "Warm and sensitive people", combination: [true, true, false, false])
+mbti9 = Mbti.create(name: "Natural leaders", combination: [false, false, true, true])
+mbti10 = Mbti.create(name: "Creative perfectionist", combination: [true, false, true, true])
+mbti11 = Mbti.create(name: "People-lover", combination: [false, false, false, true])
+mbti12 = Mbti.create(name: "Thoughtful and creative people", combination: [true, false, false, true])
+mbti13 = Mbti.create(name: "Enterprising creative people", combination: [false, false, true, false])
+mbti14 = Mbti.create(name: "Independent and problem-solver", combination: [true, false, true, false])
+mbti15 = Mbti.create(name: "Curious and confident ", combination: [false, false, false, false])
+mbti16 = Mbti.create(name: "Sensitive idealist", combination: [true, false, false, false])
 
 Match.create(mbti: mbti1, category: cat1)
 Match.create(mbti: mbti1, category: cat14)
