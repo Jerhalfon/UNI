@@ -1,3 +1,10 @@
-<% @my_mbti.categories.each do |category| %>
-<%= category.name %>
-<% end %>
+<h3>  Your profile coresponds to the profile of <%= @my_mbti.name %></h3>
+<br>
+<%= @my_mbti.explanation %>
+<br>
+<br>
+<ul>
+  <% @my_mbti.categories.each do |category| %>
+  <li><%= category.name %></li>
+  <% end %>
+</ul>
