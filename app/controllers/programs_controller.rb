@@ -5,6 +5,7 @@ class ProgramsController < ApplicationController
 
   def index
 
+
     if params[:program].present?
         name = params[:program][:name]
       price = params[:price].to_i.zero? ? (0..1000000000) : (0..params[:price].to_i)
@@ -21,6 +22,7 @@ class ProgramsController < ApplicationController
 
     else
         @programs = Program.all
+
     end
   end
 
