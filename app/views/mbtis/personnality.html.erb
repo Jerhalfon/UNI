@@ -1,3 +1,4 @@
+
 <h3>  Your profile coresponds to the profile of <%= @my_mbti.name %></h3>
 <br>
 <%= @my_mbti.explanation %>
@@ -5,6 +6,8 @@
 <br>
 <ul>
   <% @my_mbti.categories.each do |category| %>
-  <li><%= category.name %></li>
+  <li><%= link_to category.name, mbti_category_path(@mbti_id, category) %></li>
   <% end %>
 </ul>
+
+
