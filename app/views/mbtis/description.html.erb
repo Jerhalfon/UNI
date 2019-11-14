@@ -1,0 +1,6 @@
+
+<%= simple_form_for @mbti, method: :get, url: intermediary_path do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Search", value: "search" %>
+  <% end %>
+

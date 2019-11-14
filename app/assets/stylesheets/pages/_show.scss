@@ -16,6 +16,16 @@
   }
 }
 
+.university-reviews {
+  position: relative;
+}
+
+.tab-right {
+  position: absolute;
+  right: -10px;
+  top: -30px;
+}
+
 .change-icon > .far + .fas,
 .change-icon:hover > .far {
   display: none;
@@ -101,4 +111,12 @@
   .title-bold {
     font-weight: bold;
   }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 575px) {
+
 }

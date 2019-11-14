@@ -1,10 +1,12 @@
 class ApplicationController < ActionController::Base
+
   before_action :set_devise_redirect_path, unless: :devise_controller?
   # for adding fields in sign up form
   before_action :configure_permitted_parameters, if: :devise_controller?
   # before_action :configure_permitted_parameters, if: :devise_controller?
+
   include Pundit
-  before_action :store_location
+  before_action :store_location, :unless => :devise_controller?
 
   def set_devise_redirect_path
     cookies[:redirect_path] = request.path

@@ -16,6 +16,8 @@ University.delete_all
 Location.delete_all
 Category.delete_all
 User.delete_all
+Match.delete_all
+Mbti.delete_all
 
 
 loca1 = Location.create(country: "Belgium", city: "Brussels")
@@ -50,17 +52,18 @@ cat2 = Category.create(name: "Theology and Religious Studies")
 cat3 = Category.create(name: "Philosophy")
 cat4 = Category.create(name: "Law")
 cat5 = Category.create(name: "Human and Social Sciences")
-cat6 = Category.create(name: "Arts")
+cat6 = Category.create(name: "Arts and Architecture")
 cat7 = Category.create(name: "Psychology and Educational Sciences")
 cat8 = Category.create(name: "Science")
 cat9 = Category.create(name: "Engineering Science")
 cat10 = Category.create(name: "Bioscience")
-cat11 = Category.create(name: "Architecture")
 cat12 = Category.create(name: "Medicine")
 cat13 = Category.create(name: "Movement and Rehabilitation Sciences")
 cat14 = Category.create(name: "Pharmaceutical")
 cat15 = Category.create(name: "Public Health")
-cat15 = Category.create(name: "Computer Science and IT")
+cat16 = Category.create(name: "Computer Science and IT")
+cat17 = Category.create(name: "Event Management")
+
 
 
 
@@ -452,7 +455,7 @@ Program.create( university: uni4,
                         language:  ["English", "French"])
     # cat 11 --> architecture
 Program.create( university: uni4,
-                        category: cat11,
+                        category: cat6,
                         name: "Master in Architecture",
                         price: 0,
                         level: "Master" ,
@@ -463,7 +466,7 @@ Program.create( university: uni4,
                         admission_requirements: "In addition to fulfilling the admission requirements described below, the candidates must demonstrate sufficient command of the French language (level B1 of the Common European Framework of Reference).",
                         language:  "French")
 Program.create( university: uni4,
-                        category: cat11,
+                        category: cat6,
                         name: "Master in Architecture and Engineering",
                         price: 0,
                         level: "Master" ,
@@ -856,7 +859,7 @@ Program.create( university: uni1,
                 admission_requirements: "",
                 language: "French" )
 Program.create( university: uni1,
-                category: cat11,
+                category: cat6,
                 name: "Master of science in Architecture and Engineering",
                 price: 0,
                 level: "Master",
@@ -867,7 +870,7 @@ Program.create( university: uni1,
                 admission_requirements: "",
                 language: "English" )
 Program.create( university: uni1,
-                category: cat11,
+                category: cat6,
                 name: "Master in Architecture",
                 price: 0,
                 level: "Master",
@@ -878,7 +881,7 @@ Program.create( university: uni1,
                 admission_requirements: "",
                 language: "French" )
 Program.create( university: uni1,
-                category: cat11,
+                category: cat6,
                 name: "Master in Landscape Design",
                 price: 0,
                 level: "Master",
@@ -980,7 +983,62 @@ user3 = User.create(email: "user3@email.com", password: "123456")
 # review2 = Review.create(content: "Really cool University! Recomended ^^", rating: 5, title: "prog2 review", program: prog2, user: user2)
 # review3 = Review.create(content: "Good professors but reaaaly boring!", rating: 3, title: "prog3 review", program: prog3, user: user3)
 
+
+mbti1 = Mbti.create(name: "Realist", combination: [false, true, true, true])
+mbti2 = Mbti.create(name: "Hard worker", combination: [true, true, true, true])
+mbti3 = Mbti.create(name: "Gregarious traditionalist", combination: [false, true, false, true])
+mbti4 = Mbti.create(name: "Modest and dertermined worker", combination: [true, true, false, true])
+mbti5 = Mbti.create(name: "Pragmatist", combination: [false, true, true, false])
+mbti6 = Mbti.create(name: "Straightforward and honest people", combination: [true, true, true, false])
+mbti7 = Mbti.create(name: "Lively and playful people", combination: [false, true, false, false])
+mbti8 = Mbti.create(name: "Warm and sensitive people", combination: [true, true, false, false])
+mbti9 = Mbti.create(name: "Natural leaders", combination: [false, false, true, true])
+mbti10 = Mbti.create(name: "Creative perfectionist", combination: [true, false, true, true])
+mbti11 = Mbti.create(name: "People-lover", combination: [false, false, false, true])
+mbti12 = Mbti.create(name: "Thoughtful and creative people", combination: [true, false, false, true])
+mbti13 = Mbti.create(name: "Enterprising creative people", combination: [false, false, true, false])
+mbti14 = Mbti.create(name: "Independent and problem-solver", combination: [true, false, true, false])
+mbti15 = Mbti.create(name: "Curious and confident ", combination: [false, false, false, false])
+mbti16 = Mbti.create(name: "Sensitive idealist", combination: [true, false, false, false])
+
+Match.create(mbti: mbti1, category: cat1)
+Match.create(mbti: mbti1, category: cat14)
+Match.create(mbti: mbti1, category: cat4)
+Match.create(mbti: mbti2, category: cat1)
+Match.create(mbti: mbti2, category: cat16)
+Match.create(mbti: mbti3, category: cat5)
+Match.create(mbti: mbti3, category: cat12)
+Match.create(mbti: mbti4, category: cat12)
+Match.create(mbti: mbti4, category: cat7)
+Match.create(mbti: mbti5, category: cat1)
+Match.create(mbti: mbti5, category: cat17)
+Match.create(mbti: mbti6, category: cat9)
+Match.create(mbti: mbti6, category: cat16)
+Match.create(mbti: mbti6, category: cat1)
+Match.create(mbti: mbti7, category: cat6)
+Match.create(mbti: mbti7, category: cat7)
+Match.create(mbti: mbti8, category: cat13)
+Match.create(mbti: mbti8, category: cat6)
+Match.create(mbti: mbti9, category: cat1)
+Match.create(mbti: mbti9, category: cat4)
+Match.create(mbti: mbti10, category: cat1)
+Match.create(mbti: mbti10, category: cat16)
+Match.create(mbti: mbti11, category: cat5)
+Match.create(mbti: mbti11, category: cat7)
+Match.create(mbti: mbti12, category: cat5)
+Match.create(mbti: mbti12, category: cat7)
+Match.create(mbti: mbti13, category: cat1)
+Match.create(mbti: mbti13, category: cat5)
+Match.create(mbti: mbti14, category: cat16)
+Match.create(mbti: mbti14, category: cat1)
+Match.create(mbti: mbti14, category: cat6)
+Match.create(mbti: mbti15, category: cat17)
+Match.create(mbti: mbti15, category: cat5)
+Match.create(mbti: mbti16, category: cat6)
+Match.create(mbti: mbti16, category: cat13)
+Match.create(mbti: mbti16, category: cat7)
+
+
+
 puts "> data ready"
-
-
 

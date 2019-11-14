@@ -19,7 +19,7 @@
               <h3><%= link_to program.name, program_path(program) %></h3>
               <p><strong>Duration: </strong><%= program.duration %></p>
               <p><strong>Price: </strong><%= program.price %></p>
-              <p><%= program.description%></p>
+              <p><%= program.description[0..500]%><strong>Read More</strong></p>
             </div>
           </div>
       </div>
