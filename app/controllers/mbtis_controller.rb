@@ -41,6 +41,7 @@ class MbtisController < ApplicationController
     bryan = [introvert, sensor, thinker, judger]
     @my_mbti = (Mbti.where(combination: bryan)).first
 
+
     @mbti_id = @my_mbti.id
     end
   end
