@@ -24,7 +24,7 @@
     <div class="tab-right">
         <% if !user_signed_in? %>
           <p>you have to login before reviewing</p>
-          <%= link_to "Log in", new_user_session_path %>
+          <div class="btn"><%= link_to "Log in", new_user_session_path %></div>
        <% elsif policy(Review).new? %>
         <div class="btn"><%= link_to "Add a review", new_program_review_path(@program) %></div>
       <% end %>
@@ -59,6 +59,10 @@
                 <h3><%= review.title %></h3>
                 <p><span class="title-bold">Rating: </span><%= review.rating %></p>
                 <p><%= review.content %></p>
+                <% if current_user == review.user %>
+                  <div class="btn"><%= link_to "Edit your review", edit_program_review_path(@program, review) %></div>
+                  <div class="btn btn-danger"><%= link_to "Delete your review", program_review_path(@program, review), method: :delete %></div>
+                <% end %>
               </div>
             <% end %>
           <% end %>

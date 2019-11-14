@@ -48,7 +48,8 @@ class ReviewsController < ApplicationController
     @show_reviews = true
 
     if @review.save
-      render 'programs/show'
+      redirect_to program_path(@program)
+      #redirect_to program_reviews_path(@review.program)
     else
       render :new
     end
@@ -60,7 +61,8 @@ class ReviewsController < ApplicationController
     authorize @review
     @review.destroy
 
-    redirect_to program_reviews_path(@program)
+    redirect_to program_path(@program)
+    #redirect_to program_reviews_path(@program)
   end
 
   private
