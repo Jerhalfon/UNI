@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_12_092746) do
+ActiveRecord::Schema.define(version: 2019_11_13_134111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,21 @@ ActiveRecord::Schema.define(version: 2019_11_12_092746) do
   create_table "locations", force: :cascade do |t|
     t.string "country"
     t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "mbti_id"
+    t.index ["category_id"], name: "index_matches_on_category_id"
+    t.index ["mbti_id"], name: "index_matches_on_mbti_id"
+  end
+
+  create_table "mbtis", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -92,6 +107,8 @@ ActiveRecord::Schema.define(version: 2019_11_12_092746) do
 
   add_foreign_key "favorites", "programs"
   add_foreign_key "favorites", "users"
+  add_foreign_key "matches", "categories"
+  add_foreign_key "matches", "mbtis"
   add_foreign_key "programs", "categories"
   add_foreign_key "programs", "universities"
   add_foreign_key "reviews", "programs"
