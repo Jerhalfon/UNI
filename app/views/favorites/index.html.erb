@@ -13,9 +13,8 @@
         <div class="card-info-favorite">
           <h3><%= link_to favorite.program.name, program_path(favorite.program) %></h3>
           <div class="favorite-info-intern">
-            <p><%= favorite.program.university.name %> | </p>
-            <p> <%= favorite.program.price %>€/year | </p>
-            <p> <%= favorite.program.duration %> months</p>
+            <p><%= favorite.program.university.name %></p>
+            <p> <%= favorite.program.price %>€/year | <%= favorite.program.duration %> months</p>
           </div>
           <p> <%= favorite.program.description[0..100] %>...</p>
         </div>
