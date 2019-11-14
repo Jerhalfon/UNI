@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_devise_redirect_path, unless: :devise_controller?
+  # before_action :configure_permitted_parameters, if: :devise_controller?
   include Pundit
   before_action :store_location
 
@@ -28,3 +29,10 @@ class ApplicationController < ActionController::Base
     stored_location_for(resource) || root_path
   end
 end
+
+
+
+# def configure_permitted_parameters
+#   devise_parameter_sanitizer.permit(:sing_up, keys: [:name])
+#   devise_parameter_sanitizer.permit(:account_update, keys: [:name, :avatar])
+# end

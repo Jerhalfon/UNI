@@ -10,6 +10,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  mount_uploader :photo, PhotoUploader
+
+  # avatar
+  #has_one_attached :avatar
+
   # validations
   # validates :name, presence: true, uniqueness: true
 end
