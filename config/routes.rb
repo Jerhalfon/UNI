@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'personnality', to: 'mbtis#personnality'
 
   resources :mbtis, only: :new do
-    resources :categories, only: [:index]
+    resources :categories, only: [:show]
   end
 
   namespace :admin do

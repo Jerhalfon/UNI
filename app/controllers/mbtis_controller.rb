@@ -30,12 +30,18 @@ class MbtisController < ApplicationController
       content_type: "text/html",
       raw_scores: true
     )
-    result = JSON.pretty_generate(profile.result)
-    newresult = JSON.parse(result)
+    puts result = JSON.pretty_generate(profile.result)
+    new_result = JSON.parse(result)
 
-    bryan = [true, true, true, true]
+    judger = new_result["personality"][0]["percentile"] > 0.5 ? false : true
+    sensor = new_result["personality"][1]["percentile"] > 0.5 ? true : false
+    thinker = new_result["personality"][3]["percentile"] > 0.5 ? false : true
+    introvert = new_result["personality"][2]["percentile"] > 0.5 ? false : true
+
+    bryan = [introvert, sensor, thinker, judger]
     @my_mbti = (Mbti.where(combination: bryan)).first
 
+    @mbti_id = @my_mbti.id
     end
   end
 end
