@@ -37,6 +37,13 @@ class ApplicationController < ActionController::Base
       # For additional fields in app/views/devise/registrations/new.html.erb
       devise_parameter_sanitizer.permit(:sign_up, keys: [:photo, :photo_cache, :name, :last_name])
   end
+
+  private
+
+  # Overwriting the sign_out redirect path method to home
+  def after_sign_out_path_for(resource_or_scope)
+    root_path
+  end
 end
 # def configure_permitted_parameters
 #   devise_parameter_sanitizer.permit(:sing_up, keys: [:name])
