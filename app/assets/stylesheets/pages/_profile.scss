@@ -1,0 +1,88 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px
+}
+
+.profile-picture{
+
+}
+
+
+
+// imported from favorites.scss
+
+#no-favorite {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+.cards-favorite  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  padding: 40px 100px;
+}
+
+.card-favorite {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+}
+
+.image-favorite {
+  background-image: url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+
+  .delete-favorite-icon {
+    color: grey;
+  }
+}
+
+.card-info-favorite {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.favorite-info-intern {
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  z-index: 1;
+  background-color: white;
+  position: relative;
+
+  i {
+    position: absolute;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-favorite {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .cards-favorite {
+    grid-template-columns: 1fr;
+  }
+}
