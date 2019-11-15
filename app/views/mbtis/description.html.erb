@@ -4,7 +4,7 @@
   <p>Write down few sentences about yourself and see the results (minimum 100 characters)</p>
     <div class="personality-form">
       <%= simple_form_for @mbti, method: :get, url: intermediary_path do |f| %>
-        <%= f.input :name, as: :text %>
+        <%= f.input :name, as: :text, :input_html => {:minlength => 100 , required: true} %>
         <%= f.submit "Submit", value: "Submit" %>
       <% end %>
     </div>
