@@ -26,7 +26,7 @@ class ProgramsController < ApplicationController
   end
 
   def show
-    correct_uni = University.geocoded #returns flats with coordinates
+    correct_uni = University.geocoded #returns programs with coordinates
     @marker = { lat: @program.university.latitude, lng: @program.university.longitude } if correct_uni.include? @program.university
   end
 
