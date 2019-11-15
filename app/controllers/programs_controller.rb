@@ -4,9 +4,8 @@ class ProgramsController < ApplicationController
   before_action :set_program, only: [:show]
 
   def index
-
     if params[:program].present?
-        name = params[:program][:name]
+      name = params[:program][:name]
       price = params[:price].to_i.zero? ? (0..1000000000) : (0..params[:price].to_i)
       location_id = params[:program][:university][:location_id]
       category = params[:program][:category_id] == "" ? (0..100).to_a : (params[:program][:category_id].to_i)
@@ -18,16 +17,14 @@ class ProgramsController < ApplicationController
       unless location_id == ""
         @programs = @programs.select { |program| program.university.location.id == location_id.to_i }
       end
-
     else
-        @programs = Program.all
-
+      @programs = Program.all
     end
   end
 
   def show
     correct_uni = University.geocoded #returns programs with coordinates
-    @marker = { lat: @program.university.latitude, lng: @program.university.longitude } if correct_uni.include? @program.university
+    @marker =[ { lat: @program.university.latitude, lng: @program.university.longitude }] if correct_uni.include? @program.university
   end
 
   def create
