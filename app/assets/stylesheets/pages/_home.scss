@@ -1,16 +1,18 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   background: #F4F4F4;
 }
 p {
-  font-weight: lighter;
+  font-weight: 200;
 }
 h1, h2, h3 {
-  font-family: 'Varela Round', sans-serif;
-  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 h1 {
   font-size: 30px;

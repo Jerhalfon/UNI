@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'personnality', to: 'mbtis#personnality'
 
   resources :mbtis, only: :new do
-    resources :categories, only: [:index]
+    resources :categories, only: [:show]
   end
 
   namespace :admin do
@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users, only: [:show]
 
   # resources :universities do
   #   resources :programs, only: [:new, :create, :edit, :update]

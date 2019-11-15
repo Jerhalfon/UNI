@@ -7,18 +7,44 @@
   <div class="navbar-right">
     <ul>
       <% if !user_signed_in? %>
-        <li class="green-btn"><%= link_to 'Login', new_user_session_path%></li>
         <%= link_to new_user_session_path do %>
         <li><i class="far fa-heart"></i></li>
+        <li class="green-btn"><%= link_to 'Login', new_user_session_path%></li>
         <% end %>
           <%#= link_to "Log in", new_user_session_path %>
        <% elsif policy(Favorite).create? %>
         <%= link_to favorites_path do %>
         <li><i class="far fa-heart"></i></li>
         <% end %>
-         <li class="green-btn"><%= link_to 'Logout', destroy_user_session_path, method: "delete" %></li>
+         <!-- avatar -->
+         <li class="nav-item dropdown">
+            <% if current_user.photo.present? %>
+             <%= cl_image_tag current_user.photo , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+             <%= image_tag "default_avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
+            <% end %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Action", "#", class: "dropdown-item" %>
+            <%= link_to "My Profile", user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+
         <% else %>
-        <li class="green-btn"><%= link_to 'Logout', destroy_user_session_path, method: "delete" %></li>
+        <!-- avatar -->
+        <li class="nav-item dropdown">
+          <!-- cl_image_tag current_user.photo -->
+          <% if current_user.photo.present? %>
+             <%= cl_image_tag current_user.photo , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+             <%= image_tag "default_avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
+            <% end %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Action", "#", class: "dropdown-item" %>
+            <%= link_to "My profile", "#", class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
       <% end %>
     </ul>
   </div>
