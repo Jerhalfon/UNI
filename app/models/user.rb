@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :reviews, dependent: :destroy
@@ -17,4 +20,6 @@ class User < ApplicationRecord
 
   # validations
   # validates :name, presence: true, uniqueness: true
+
+    # @user.profilePicture = "/assets/images/default_image.jpg" if @user.profilePicture.empty?
 end
