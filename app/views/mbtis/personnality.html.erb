@@ -7,12 +7,12 @@
     <p><%= @my_mbti.explanation %></p>
   </div>
   <div class="match-container">
-    <h3>Categories that match your profile:</h4>
+    <p><strong>Categories that match your profile:</strong></p>
   </div>
   <div class="category-container">
     <% @my_mbti.categories.each do |category| %>
       <div class="category-card">
-        <%= category.name %>
+        <%= link_to category.name, mbti_category_path(@mbti_id, category) %>
       </div>
     <% end %>
   </div>
