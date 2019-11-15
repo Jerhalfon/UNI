@@ -1,7 +1,7 @@
 <% if @favorites.empty? %>
   <p id="no-favorite"> No favorites yet </p>
 <% else %>
-  <div class="cards-favorite">
+  <div id="sortableCard" class="cards-favorite">
     <% @favorites.each do |favorite|%>
       <div class="card-favorite" id="favorite-<%= favorite.id %>">
         <div class="image-favorite">
