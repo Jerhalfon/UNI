@@ -1,35 +1,31 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
     <h1>Take the right decision for your future!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn" href="#">Apply now</a>
+    <p>And take our IBM Watson personality test</p>
+    <%= link_to "Take the test", description_path %>
   </div>
 </div>
 
 <div class="body-home">
-  <h2>Find programs</h2>
-  <div class="line"></div>
-  <div class="section-inputs">
-    <div class="input-column">
-      <input type="text" placeholder="Course">
-      <input type="text" placeholder="City/Country/university">
-      <input type="text" placeholder="Degree">
-      <input type="text" placeholder="Maximum price">
-    </div>
-    <div class="input-column">
-      <input type="text" placeholder="Duration">
-      <input type="text" placeholder="City/Country/university">
-      <input type="text" placeholder="Degree">
-      <input type="text" placeholder="Maximum price">
-    </div>
-    <div class="input-column">
-      <input type="text" placeholder="Course">
-      <input type="text" placeholder="City/Country/university">
-      <input type="text" placeholder="Degree">
-      <input type="text" placeholder="Maximum price">
-    </div>
-    <%= link_to 'Search', programs_path, class: "btn-search" %>
-  </div>
+<%= simple_form_for @program, method: :get, url: programs_path do |f| %>
+  <%= f.input :name %>
+  <%= range_field_tag :price, in: 1..100, :label => "price" %>
+ <%= f.association :category %>
+  <%= f.input :duration, collection: @duration %>
+  <%= f.input :level, collection: @levels %>
+  <%= f.simple_fields_for University.new do |uf| %>
+  <%= uf.association :location,
+                as: :select,
+                label_method: :city_and_country,
+                value_method: :id %>
+  <% end %>
+  <%= f.submit "Search", value: "search" %>
+<% end %>
+<% if !user_signed_in? %>
+<% elsif current_user.admin == true %>
+  <%= link_to "Add a program", admin_universities_path(:admin) %>
+<% else %>
+<% end %>
 
   <div class="topics-section">
   <h2>The topics</h2>

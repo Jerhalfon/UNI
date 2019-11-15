@@ -2,14 +2,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 }
 
 .university-image {
-  background-image: url(https://images.unsplash.com/20/cambridge.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2230&q=80);
   width: 80%;
   height: 400px;
   background-position: center;
   background-size: cover;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.university-reviews {
+  position: relative;
+}
+
+.tab-right {
+  position: absolute;
+  right: -10px;
+  top: -30px;
 }
 
 .change-icon > .far + .fas,
@@ -30,6 +44,17 @@
     cursor: pointer;
   }
 }
+
+.change-icon {
+  .far {
+    color: black;
+  }
+
+  .fas {
+    color: black;
+  }
+}
+
 
 .tab {
   display: flex;
@@ -77,6 +102,7 @@
   background-color: #E7E6E6;
   margin-top: 20px;
   padding: 40px;
+  margin-bottom: 20px;
 
   h2 {
     border-bottom: 1px solid black;
@@ -85,4 +111,12 @@
   .title-bold {
     font-weight: bold;
   }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 575px) {
+
 }
