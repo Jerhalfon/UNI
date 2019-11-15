@@ -1,10 +1,19 @@
-<h3>  Your profile coresponds to the profile of <%= @my_mbti.name %></h3>
-<br>
-<%= @my_mbti.explanation %>
-<br>
-<br>
-<ul>
-  <% @my_mbti.categories.each do |category| %>
-  <li><%= category.name %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="profile-container">
+    <h3>  Your profile coresponds to the profile of <%= @my_mbti.name %></h3>
+  </div>
+  <div class="avatar-container">
+    <p><%= @my_mbti.explanation %></p>
+  </div>
+  <div class="match-container">
+    <h3>Categories that match your profile:</h4>
+  </div>
+  <div class="category-container">
+    <% @my_mbti.categories.each do |category| %>
+      <div class="category-card">
+        <%= category.name %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

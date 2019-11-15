@@ -1,0 +1,44 @@
+.avatar-container {
+  border-radius: 10px;
+  border-style: bold;
+  // border: 1px solid black;
+  padding: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.avatar-container p {
+  color: black;
+}
+
+.category-card {
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: #FFFFFF;
+  width: 201px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.profile-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.category-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.match-container {
+  margin-top: 20px
+}
+
+.match-container h3 {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
