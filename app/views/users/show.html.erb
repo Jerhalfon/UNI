@@ -1,0 +1,15 @@
+<div class = profile>
+  <h1>My profile</h1>
+  <br>
+  <div>
+    <%= cl_image_tag @user.photo, height: 500, width: 400, crop: :fill %>
+  </div>
+  <br>
+  <h2> Name : <%=@user.name %> <%=@user.last_name%></h2>
+  <h2> Mail : <%= @user.email %></h2>
+</div>
+
+
+
+
+
