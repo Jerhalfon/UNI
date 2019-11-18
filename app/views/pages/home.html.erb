@@ -8,14 +8,16 @@
 
 <div class="body-home">
 <%= simple_form_for @program, method: :get, url: programs_path do |f| %>
-  <%= f.input :name %>
-  <%= range_field_tag :price, in: 1..100, :label => "price" %>
- <%= f.association :category %>
+ <%= f.association :category, required: false %>
+  <%= f.input :name, required: false, label: "Program title" %>
+  <%= f.label :price, name: "Price", id: "program_price_label", label: "Price: 0/100,000" %>
+  <%= range_field :program, :price, in: 0..100000, value: 0, class: "price-value-slider" %>
   <%= f.input :duration, collection: @duration %>
   <%= f.input :level, collection: @levels %>
   <%= f.simple_fields_for University.new do |uf| %>
   <%= uf.association :location,
                 as: :select,
+                required: false,
                 label_method: :city_and_country,
                 value_method: :id %>
   <% end %>

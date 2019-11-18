@@ -3,6 +3,23 @@
   <div class="profile-container">
     <h3>  Your profile coresponds to the profile of <%= @my_mbti.name %></h3>
   </div>
+  <div class="personality-results">
+    <div class="personality-trait", id="chart">
+      <h3>Openeness <%= @openeness %> %</h3>
+    </div>
+    <div class="personality-trait">
+      <h3>Conscientiousness <%= @conscientiousness %> %</h3>
+    </div>
+    <div class="personality-trait">
+      <h3>Extraversion <%= @extraversion %> %</h3>
+    </div>
+    <div class="personality-trait">
+      <h3>Agreeableness <%= @agreeableness %> %</h3>
+    </div>
+    <div class="personality-trait">
+      <h3>Emotional range <%= @emotional_range %> %</h3>
+    </div>
+  </div>
   <div class="avatar-container">
     <p><%= @my_mbti.explanation %></p>
   </div>
