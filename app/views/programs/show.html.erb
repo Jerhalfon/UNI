@@ -25,19 +25,29 @@
   <div class="university-description">
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade  <%= 'show active' unless @show_reviews %>" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
-          <h2><%= @program.name %></h2>
-          <p><span class="title-bold">Price: </span><%= @program.price %></p>
-          <p><span class="title-bold">Duration: </span><%= @program.duration %> months</p>
-          <p><%= @program.description + @program.description + @program.description + @program.description %></p>
+          <div class="program-title">
+            <h2><%= @program.name %></h2>
+          </div>
+          <div class="program-icons">
+            <div class="icons">
+              <i class="fas fa-euro-sign"></i><p><span class="title-bold"></span><%= @program.price %></p>
+            </div>
+            <div class="icons">
+              <i class="fas fa-calendar-alt"></i><p><span class="title-bold"></span><%= @program.duration %> months</p>
+            </div>
+            <div class="icons">
+              <i class="fas fa-globe"></i></i><p><span class="title-bold"></span><%= @program.language %></p>
+            </div>
+          </div>
+          <p><%= @program.description %></p>
 
       </div>
 
       <div class="tab-pane fade" id="nav-requirements" role="tabpanel" aria-labelledby="nav-requirements-tab">
           <h2><%= @program.name %></h2>
-          <p><span class="title-bold">Price: </span><%= @program.price %></p>
+          <i class="fas fa-euro-sign"></i><p><span class="title-bold">Price: </span><%= @program.price %></p>
           <p><span class="title-bold">Duration: </span><%= @program.duration %> months</p>
-          <p><%= @program.description + @program.description + @program.description + @program.description %></p>
-          <p>Hello</p>
+          <p><%= @program.description %></p>
       </div>
 
       <div class="tab-pane fade <%= 'show active' if @show_reviews %>" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">

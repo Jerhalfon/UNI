@@ -10,6 +10,7 @@
   height: 400px;
   background-position: center;
   background-size: cover;
+  border-radius: 10px;
 
   a {
     text-decoration: none;
@@ -58,7 +59,7 @@
 
 .tab {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 80%;
   height: 60px;
@@ -102,16 +103,33 @@
   background-color: #E7E6E6;
   margin-top: 20px;
   padding: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   h2 {
-    border-bottom: 1px solid black;
+    margin-bottom: 40px;
   }
 
   .title-bold {
     font-weight: bold;
   }
 }
+
+
+.program-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
+.icons {
+  display: flex;
+}
+
+.program-title {
+
+}
+
+
 
 @media (max-width: 768px) {
 
