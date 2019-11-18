@@ -9,15 +9,15 @@
 puts "> creating data"
 
 
-Favorite.delete_all
-Review.delete_all
-Program.delete_all
-University.delete_all
-Location.delete_all
-Category.delete_all
-User.delete_all
-Match.delete_all
-Mbti.delete_all
+User.destroy_all
+Favorite.destroy_all
+Location.destroy_all
+University.destroy_all
+Category.destroy_all
+Program.destroy_all
+Review.destroy_all
+Match.destroy_all
+Mbti.destroy_all
 
 
 loca1 = Location.create(country: "Belgium", city: "Brussels")
