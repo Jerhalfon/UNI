@@ -37,12 +37,12 @@ uni2.remote_photo_url = url2
 uni2.save
 
 url3 = "https://images.unsplash.com/photo-1474650919751-b7e21a1b180f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1650&q=80"
-uni3 = University.create(name: "Université de Namur", location: loca3, address: "Place de Londres 9, 1050 Ixelles")
+uni3 = University.create(name: "  ", location: loca3, address: "Place de Londres 9, 1050 Ixelles")
 uni3.remote_photo_url = url3
 uni3.save
 
 url4 = "https://images.unsplash.com/photo-1474650919751-b7e21a1b180f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1650&q=80"
-uni4 = University.create(name: "Université catholique de Louvain", location: loca5)
+uni4 = University.create(name: "Université catholique de Louvain", location: loca5, address: "Place de l'Université 1, 1348 Ottignies-Louvain-la-Neuve")
 uni4.remote_photo_url = url4
 uni4.save
 
