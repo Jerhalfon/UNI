@@ -1,8 +1,34 @@
-<div class="container container-index">
-  <h2>Our Programs</h2>
+<h2>Our Programs</h2>
+<% if !user_signed_in? %>
+<% elsif current_user.admin == true %>
+  <%= link_to "Add a program", admin_universities_path(:admin) %>
+<% else %>
+<% end %>
+<div class="container container-index flex-search">
+  <div>
+    <%= simple_form_for @program, method: :get, url: programs_path do |f| %>
+      <%= f.input :name, input_html: {value: @name } %>
+
+      <%= range_field_tag :price, in: 1..100, :label => "price" %>
+     <%= f.association :category,   prompt: "Select category" , selected: @category.class == Array ? nil : @category  %>
+
+
+      <%= f.input :duration, collection: @all_duration, prompt: "Select category" , selected: @input_duration.include?(140) ? nil : "#{@input_duration.last} months"   %>
+      <%= f.input :level, collection: @levels, selected: @input_level %>
+      <%= f.simple_fields_for University.new do |uf| %>
+      <%= uf.association :location,
+                    as: :select,
+                    label_method: :city_and_country,
+                    value_method: :id,
+                    input_html: {value: @location_id } %>
+      <% end %>
+      <%= f.submit "Search", value: "search" %>
+    <% end %>
+  </div>
+
   <div class="cards-index">
     <% @programs.each do |program| %>
-      <div class="card-product">
+      <div class="card-product height-card">
 <!--           <img src="https://images.unsplash.com/20/cambridge.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1630&q=80" />-->
           <%= link_to program_favorites_path(program), method: :post do %>
             <span class="change-icon-programs change-icon">
