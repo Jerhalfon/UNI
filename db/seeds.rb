@@ -27,7 +27,7 @@ loca4 = Location.create(country: "England", city: "London")
 loca5 = Location.create(country: "Belgium", city: "Leuven")
 
 url1 = "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-uni1 = University.create(name: "ULB", location: loca1)
+uni1 = University.create(name: "Université Libre de Bruxelles", location: loca1)
 uni1.remote_photo_url = url1
 uni1.save
 
