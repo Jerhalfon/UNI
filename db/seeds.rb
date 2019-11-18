@@ -66,8 +66,6 @@ cat17 = Category.create(name: "Event Management")
 
 
 
-
-
 # programs at UCL
 
 Program.create( university: uni4,

@@ -10,7 +10,7 @@
   height: 400px;
   background-position: center;
   background-size: cover;
-  border-radius: 10px;
+  border-radius: 20px;
 
   a {
     text-decoration: none;
@@ -118,11 +118,23 @@
 .program-icons {
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  width: auto;
+  background: #F4F4F4;
+  text-align: center;
+  border-radius: 3px;
+  margin: 30px;
+
 }
 
 .icons {
   display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.icons p {
+  margin: 3px;
+
 }
 
 .program-title {
