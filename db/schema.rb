@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 2019_11_19_140448) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "contact"
     t.index ["program_id"], name: "index_reviews_on_program_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end

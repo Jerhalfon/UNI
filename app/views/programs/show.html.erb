@@ -78,6 +78,7 @@
           <% if @program.reviews.empty? %>
             <p id="no-review"> No reviews yet be the first </p>
           <% else %>
+
             <% @program.reviews.each do |review| %>
               <div class="review">
                 <div class="image-right">
@@ -87,12 +88,17 @@
                 <p><span class="title-bold">Rating: </span><%= review.rating %></p>
                 <p><%= review.content %></p>
                 <% if current_user == review.user %>
-                  <div class="btn btn-primary"><%= link_to "Edit", edit_program_review_path(@program, review) %></div>
-                  <div class="btn btn-primary"><%= link_to "Delete", program_review_path(@program, review), method: :delete %></div>
-                <% end %>
+
+                  <div class="btn"><%= link_to "Edit your review", edit_program_review_path(@program, review) %></div>
+                  <div class="btn ©"><%= link_to "Delete your review", program_review_path(@program, review), method: :delete %></div>
+                  <% if review.contact %>
+                    <p class = "contact"> Contact <a href=""><%= review.user.email %> </a> for more information </p>
+                  <%end%>
+                <%end%>
+
               </div>
-            <% end %>
-          <% end %>
+            <%end%>
+          <%end%>
         </div>
       </div>
     </div>
