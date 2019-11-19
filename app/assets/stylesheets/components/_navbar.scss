@@ -8,6 +8,16 @@
   position: absolute;
 }
 
+.navbar-minimalist-all {
+  box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
 .navbar-left i {
   font-size: 40px;
   color: #313131;

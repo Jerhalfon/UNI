@@ -1,3 +1,14 @@
+.body-index-program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+
+  .line-title {
+    width: 100px;
+  }
+}
+
 .card-info {
   padding: 10px;
   text-align: justify;
@@ -28,6 +39,7 @@
   align-items: center;
   margin-top: 20px;
   position: relative;
+  border-radius: 10px;
 
   .change-icon-programs {
     position: absolute;
@@ -79,6 +91,10 @@
 
 .container-index {
   margin-top: 10px;
+
+  .btn-home-form {
+    width: 100%;
+  }
 }
 
 .card-product-right {
