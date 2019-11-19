@@ -65,12 +65,6 @@ cat16 = Category.create(name: "Computer Science and IT")
 cat17 = Category.create(name: "Event Management")
 
 
-<<<<<<< HEAD
-
-# programs at UCL
-
-=======
->>>>>>> master
 Program.create( university: uni4,
                         category: cat1 ,
                         name: "Master in Econommics: Econometrics",
