@@ -42,4 +42,21 @@ class ProgramsController < ApplicationController
   def delete_month(choice)
     choice.split(' ').first.to_i
   end
+
+  def favorite
+    @program = Program.find(params[:id])
+    type = params[:type]
+    if type == "favorite"
+      current_user.favorites << @program
+      redirect_to :back, notice: 'Added to favorites'
+
+    elsif type == "unfavorite"
+      current_user.favorites.delete(@program)
+      redirect_to :back, notice: 'Removed from favorites'
+
+    else
+      # Type missing, nothing happens
+      redirect_to :back, notice: 'Nothing happened.'
+    end
+  end
 end
