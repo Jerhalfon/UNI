@@ -1,8 +1,9 @@
-
+    <div id="personality-stat" data-openeness="<%= @openeness %>" data-conscientiousness="<%= @conscientiousness %>" data-extraversion="<%= @extraversion %>" data-agreeableness="<%= @agreeableness %>" data-emotional_range="<%= @emotional_range %>">
+    </div>
 <div class="container-personnality">
   <div class="profile-mbti">
     <div>
-      <%= image_tag( @my_mbti.icon )%>
+      <%= cl_image_tag( @my_mbti.icon, width:260, height: 260 )%>
     </div>
     <div>
       <h3>  Your profile coresponds to </h3>
@@ -20,20 +21,18 @@
     </div>
     <div class="personality-trait" id="chart5">
     </div>
-    <div id="personality-stat" data-openeness="<%= @openeness %>" data-conscientiousness="<%= @conscientiousness %>" data-extraversion="<%= @extraversion %>" data-agreeableness="<%= @agreeableness %>" data-emotional_range="<%= @emotional_range %>">
-    </div>
   </div>
-  <div class="categories-explanation"></div>
+</div>
+  <div class="categories-explanation">
     <h1>Subjects that match your profile</h1>
     <div class="mbti-description">
       <p><%= @my_mbti.explanation %></p>
     </div>
-    <div class="category-card">
+    <div class="category-cards">
       <% @my_mbti.categories.each do |category| %>
-        <div class="category-card">
+        <div class="my-category-card">
           <%= link_to category.name, mbti_category_path(@mbti_id, category) %>
         </div>
       <% end %>
     </div>
   </div>
-</div>

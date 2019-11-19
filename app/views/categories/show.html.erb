@@ -1,3 +1,20 @@
+<%= simple_form_for @program, method: :get, url: programs_path do |f| %>
+  <%= f.association :category, required: false, selected: @category %>
+  <%= f.input :name, required: false, label: "Program title" %>
+  <%= f.simple_fields_for University.new do |uf| %>
+    <%= uf.association :location,
+                  as: :select,
+                  required: false,
+                  label_method: :city_and_country,
+                  value_method: :id %>
+  <% end %>
+  <%= f.input :duration, collection: @duration %>
+  <%= f.input :level, collection: @levels %>
+  <%= f.label :price, name: "Price", id: "program_price_label", label: "Price: 0/100,000" %>
+  <%= range_field :program, :price, in: 0..100000, value: 0, class: "price-value-slider" %>
+  <%= f.submit "Search", value: "Search", class: "btn-home-form" %>
+  <% end %>
+
 <div class="container container-index">
   <h2>Our Programs</h2>
   <div class="cards-index">

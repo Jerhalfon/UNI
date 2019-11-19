@@ -9,10 +9,9 @@
     <%= simple_form_for @program, method: :get, url: programs_path do |f| %>
       <%= f.input :name, input_html: {value: @name } %>
 
-      <%= range_field_tag :price, in: 1..100, :label => "price" %>
+      <%= f.label :price, name: "Price", id: "program_price_label", label: "Price: 0/100,000" %>
+      <%= range_field :program, :price, in: 0..100000, value: 0, class: "price-value-slider" %>
      <%= f.association :category,   prompt: "Select category" , selected: @category.class == Array ? nil : @category  %>
-
-
       <%= f.input :duration, collection: @all_duration, prompt: "Select category" , selected: @input_duration.include?(140) ? nil : "#{@input_duration.last} months"   %>
       <%= f.input :level, collection: @levels, selected: @input_level %>
       <%= f.simple_fields_for University.new do |uf| %>
@@ -52,4 +51,3 @@
     <% end %>
   </div>
 </div>
-<div id = "map"></div>
