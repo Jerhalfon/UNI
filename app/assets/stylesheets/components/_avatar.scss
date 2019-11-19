@@ -4,6 +4,16 @@
   background-size: cover;
   background-position: top center;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-medium {
+  width: 55px;
+  height: 55px;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .avatar-large {
