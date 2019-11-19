@@ -113,6 +113,9 @@ ActiveRecord::Schema.define(version: 2019_11_18_144458) do
     t.bigint "location_id"
     t.string "photo"
     t.string "remote_photo_url"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["location_id"], name: "index_universities_on_location_id"
   end
 
