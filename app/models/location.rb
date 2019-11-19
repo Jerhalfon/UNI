@@ -1,6 +1,6 @@
 class Location < ApplicationRecord
   # references
-  has_many :universities
+  has_many :universities, dependent: :destroy
 
   # validations
   validates :country, presence: true

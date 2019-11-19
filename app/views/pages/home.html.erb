@@ -51,9 +51,6 @@
   <div class="home-form" id="search">
     <h2>Search the right program</h2>
     <div class="line-title"></div>
-
-
-
 <%= simple_form_for @program, method: :get, url: programs_path do |f| %>
   <div class="input-col">
     <%= f.association :category, required: false %>
