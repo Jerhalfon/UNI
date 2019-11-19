@@ -215,7 +215,6 @@ h3 {
 }
 
 .concept {
-  margin-top: 40px;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -227,6 +226,10 @@ h3 {
   }
 
   .concept-button {
+    margin-top: 40px;
+  }
+
+  h2 {
     margin-top: 40px;
   }
 }
