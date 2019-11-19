@@ -33,6 +33,13 @@ class MbtisController < ApplicationController
     puts result = JSON.pretty_generate(profile.result)
     new_result = JSON.parse(result)
 
+    @openeness = (new_result["personality"][0]["percentile"] * 100).round(2)
+    @conscientiousness = (new_result["personality"][1]["percentile"] * 100).round(2)
+    @extraversion = (new_result["personality"][2]["percentile"] * 100).round(2)
+    @agreeableness = (new_result["personality"][3]["percentile"] * 100).round(2)
+    @emotional_range = (new_result["personality"][4]["percentile"] * 100).round(2)
+
+
     judger = new_result["personality"][0]["percentile"] > 0.5 ? false : true
     sensor = new_result["personality"][1]["percentile"] > 0.5 ? true : false
     thinker = new_result["personality"][3]["percentile"] > 0.5 ? false : true
