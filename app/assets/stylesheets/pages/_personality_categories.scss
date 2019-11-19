@@ -1,0 +1,36 @@
+.personality-results {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1000px;
+}
+
+.personality-trait {
+
+  // width: 200px;
+  // height: 200px;
+}
+
+.personality-trait + .personality-trait {
+  margin-left: 20px;
+}
+
+
+.container-personnality {
+  width: 1096px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-mbti {
+  display: flex;
+  align-items: center;
+}
+
+.profile-mbti h1 {
+  font-family: 'Exo', sans-serif;
+}
+
+.categories-explanation {
+  text-align: center;
+}
