@@ -59,12 +59,12 @@
 
 .tab {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 80%;
   height: 60px;
   margin-top: 20px;
-  background-color: #E7E6E6;
+  background-color: #F4F4F4;
   padding: 0 40px;
 }
 
@@ -99,8 +99,8 @@
 }
 
 .university-description {
-  width: 80%;
-  background-color: #E7E6E6;
+  width: 700px;
+  background-color: #F4F4F4;
   margin-top: 20px;
   padding: 40px;
   margin-bottom: 40px;
@@ -122,7 +122,9 @@
   background: #F4F4F4;
   text-align: center;
   border-radius: 3px;
-  margin: 30px;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  width: 700px;
 
 }
 
