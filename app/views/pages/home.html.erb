@@ -51,26 +51,32 @@
   <div class="home-form" id="search">
     <h2>Search the right program</h2>
     <div class="line-title"></div>
-  <%= simple_form_for @program, method: :get, url: programs_path do |f| %>
-    <div class="input-col">
-      <%= f.input :name %>
-      <%= f.association :category %>
+<%= simple_form_for @program, method: :get, url: programs_path do |f| %>
+  <div class="input-col">
+    <%= f.association :category, required: false %>
+    <%= f.input :name, required: false, label: "Program title" %>
+  </div>
+  <div class="input-col">
+    <%= f.simple_fields_for University.new do |uf| %>
+    <%= uf.association :location,
+                  as: :select,
+                  required: false,
+                  label_method: :city_and_country,
+                  value_method: :id %>
+    <% end %>
+    <%= f.input :duration, collection: @duration %>
+  </div>
+  <div class="input-col">
+    <%= f.input :level, collection: @levels %>
+    <div class="form-group select optional program_level">
+      <%= f.label :price, name: "Price", id: "program_price_label", label: "Price: 0/100,000" %>
+      <%= range_field :program, :price, in: 0..100000, value: 0, class: "price-value-slider" %>
     </div>
-    <div class="input-col">
-      <%= f.input :duration, collection: @duration %>
-      <%= f.input :level, collection: @levels %>
-    </div>
-    <div class="input-col">
-      <%= f.simple_fields_for University.new do |uf| %>
-      <%= uf.association :location,
-                    as: :select,
-                    label_method: :city_and_country,
-                    value_method: :id %>
-      <%= range_field_tag :price, in: 1..100, :label => "price" %>
-    </div>
-      <% end %>
-      <div class="button-form"><%= f.submit "Search", value: "Search", class: "btn-home-form" %>
-  <% end %>
+  </div>
+  <div class="button-form"><%= f.submit "Search", value: "Search", class: "btn-home-form" %>
+<% end %>
+
+
 </div>
 <% if !user_signed_in? %>
 <% elsif current_user.admin == true %>
