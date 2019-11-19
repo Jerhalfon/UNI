@@ -15,7 +15,6 @@
           <a class="nav-item nav-link show active" id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">Description</a>
           <a class="nav-item nav-link" id="nav-requirements-tab" data-toggle="tab" href="#nav-requirements" role="tab" aria-controls="nav-requirements" aria-selected="false">Entry Requirements</a>
           <a class="nav-item nav-link <%= 'show active' if @show_reviews %>" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="false">Reviews</a>
-
         </div>
       </nav>
     </div>
@@ -24,18 +23,46 @@
   <div class="university-description">
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade  <%= 'show active' unless @show_reviews %>" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
-          <h2><%= @program.name %></h2>
-          <p><span class="title-bold">Price: </span><%= @program.price %></p>
-          <p><span class="title-bold">Duration: </span><%= @program.duration %> months</p>
-          <p><%= @program.description + @program.description + @program.description + @program.description %></p>
+        <div class="container-show">
+          <div class="container-description">
+            <div class="program-title">
+              <h2><%= @program.name %></h2>
+            </div>
+            <div class="program-icons">
+              <div class="icons">
+                <i class="fas fa-euro-sign"></i><p><span class="title-bold"></span><%= @program.price %></p>
+              </div>
+              <div class="icons">
+                <i class="fas fa-calendar-alt"></i><p><span class="title-bold"></span><%= @program.duration %> months</p>
+              </div>
+              <div class="icons">
+                <i class="fas fa-globe"></i></i><p><span class="title-bold"></span><%= @program.language %></p>
+              </div>
+            </div>
+            <p><%= @program.description %></p>
+          </div>
+          <div class="container-map">
+            <div class="position-icon">
+              <div class="icons">
+                <i class="fas fa-map-marker-alt"></i><p><span class="title-bold"></span><%= @program.university.location.city_and_country %></p>
+              </div>
+            </div>
+            <div
+              id="map"
+              style="width: 100%;
+              height: 400px;"
+              data-markers="<%= @marker.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+            ></div>
+          </div>
+        </div>
       </div>
 
       <div class="tab-pane fade" id="nav-requirements" role="tabpanel" aria-labelledby="nav-requirements-tab">
-          <h2><%= @program.name %></h2>
-          <p><span class="title-bold">Price: </span><%= @program.price %></p>
+          <h2>NO INFO AVAILABLE AT THE MOMENT</h2>
+        <!--   <i class="fas fa-euro-sign"></i><p><span class="title-bold">Price: </span><%= @program.price %></p>
           <p><span class="title-bold">Duration: </span><%= @program.duration %> months</p>
-          <p><%= @program.description + @program.description + @program.description + @program.description %></p>
-          <p>Hello</p>
+          <p><%= @program.description %></p> -->
       </div>
 
       <div class="tab-pane fade <%= 'show active' if @show_reviews %>" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">
@@ -51,34 +78,24 @@
           <% if @program.reviews.empty? %>
             <p id="no-review"> No reviews yet be the first </p>
           <% else %>
-          <!-- reviews layout box -->
-            <div class = "card-reviews-infos">
-              <!-- avatar +contact info -->
-              <div class = "avatar-review-box">
-                <% if current_user.photo.present? %>
-                   <%= cl_image_tag current_user.photo , class: "avatar-review" %>
-                <% else %>
-                   <%= image_tag "default_avatar.png", class: "avatar-review" %>
-                <% end %>
-              </div>
-              <div>
-                <!-- review content -->
-                <% @program.reviews.each do |review| %>
-                  <div class="review">
-                    <h3><%= review.title %></h3>
-                    <p><span class="title-bold">Rating: </span><%= review.rating %></p>
-                    <p><%= review.content %></p>
-                    <% if current_user == review.user %>
-                      <div class="btn"><%= link_to "Edit your review", edit_program_review_path(@program, review) %></div>
-                      <div class="btn" ><%= link_to "Delete your review", program_review_path(@program, review), method: :delete %></div>
-                    <% end %>
-                  </div>
+
+            <% @program.reviews.each do |review| %>
+              <div class="review">
+                <div class="image-right">
+                  <img class="avatar-medium" src="<%= review.user.photo %>" alt="">
+                </div>
+                <h3><%= review.title %></h3>
+                <p><span class="title-bold">Rating: </span><%= review.rating %></p>
+                <p><%= review.content %></p>
+                <% if current_user == review.user %>
+                  <div class="btn"><%= link_to "Edit your review", edit_program_review_path(@program, review) %></div>
+                  <div class="btn ©"><%= link_to "Delete your review", program_review_path(@program, review), method: :delete %></div>
                   <% if review.contact %>
-                  <p class = "contact"> Contact <a href=""><%= review.user.email %> </a> for more information </p>
+                    <p class = "contact"> Contact <a href=""><%= review.user.email %> </a> for more information </p>
                   <%end%>
                 <%end%>
               </div>
-            </div>
+            <%end%>
           <%end%>
         </div>
       </div>
