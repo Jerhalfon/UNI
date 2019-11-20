@@ -1,12 +1,30 @@
 .body-index-program {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
+  background-color: #FBF7F7
+}
 
-  .line-title {
-    width: 100px;
+.index-program-left {
+  background-color: white;
+  padding: 50px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+  #program_price {
+    width: 100%;
   }
+
+  .btn-home-form {
+    width: 100%;
+  }
+}
+
+.index-program-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 50px 0 50px;
 }
 
 .card-info {
@@ -26,7 +44,7 @@
 }
 
 .cards-index {
-  margin: 10px;
+  width: 100%;
 }
 
 
@@ -99,7 +117,15 @@
 
 .card-product-right {
   padding: 15px;
-  width: 700px;
+  width: 90%;
+
+  p:last-child {
+    text-align: center;
+  }
+
+  h2 a {
+    color: #4278d6;
+  }
 }
 
 @media (max-width: 768px) {
