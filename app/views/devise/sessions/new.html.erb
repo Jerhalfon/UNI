@@ -1,10 +1,10 @@
 <div class="login-body">
   <div class="login-form-all">
-    <%= link_to root_path do %>
-      <i class="fas fa-times"></i>
-    <% end %>
     <div class="login-form form-left"></div>
     <div class="login-form form-right">
+      <%= link_to root_path do %>
+        <i class="fas fa-times"></i>
+      <% end %>
       <h2>Log in</h2>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
