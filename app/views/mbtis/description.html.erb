@@ -14,10 +14,11 @@
 
   <div class="main-div">
     <h2>You don’t know what you want to study ? </br>Don’t worry, our personality test will help you.</h2>
-    <p>Write down few sentences about yourself and see the results (minimum 100 words)</p>
+    <p>Write down a few sentences about yourself and see the results (minimum 100 words)</p>
     <div class="personality-form">
       <%= simple_form_for @mbti, method: :get, url: intermediary_path do |f| %>
         <%= f.text_area :name,
+                        id: "myText",
                         label: "Your description",
                         :rows => 10,
                         :cols => 50,
@@ -27,5 +28,6 @@
       <% end %>
     </div>
   </div>
+  <p>Word count: <span id="wordCount">0</span></p>
 </div >
 
