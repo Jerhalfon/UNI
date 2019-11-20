@@ -195,3 +195,12 @@
   width: 270px;
   border-radius: 10px;
 }
+
+.tab-pane > .tab-pane {
+  display: none;
+}
+
+
+.tab-pane > .tab-pane.active.show {
+  display: block;
+}

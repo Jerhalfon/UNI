@@ -13,6 +13,7 @@
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <a class="nav-item nav-link show active" id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">Description</a>
+          <a class="nav-item nav-link" id="nav-courses-tab" data-toggle="tab" href="#nav-courses" role="tab" aria-controls="nav-courses" aria-selected="false">Courses</a>
           <a class="nav-item nav-link" id="nav-requirements-tab" data-toggle="tab" href="#nav-requirements" role="tab" aria-controls="nav-requirements" aria-selected="false">Entry Requirements</a>
           <a class="nav-item nav-link <%= 'show active' if @show_reviews %>" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="false">Reviews</a>
         </div>
@@ -58,8 +59,46 @@
         </div>
       </div>
 
+
+      <div class="tab-pane fade" id="nav-courses" role="tabpanel" aria-labelledby="nav-courses-tab">
+        <div class="tab">
+          <div class="tab-left">
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link" id="nav-course1-tab" data-toggle="tab" href="#nav-course1" role="tab" aria-controls="nav-course1" aria-selected="true">Year 1</a>
+                <a class="nav-item nav-link" id="nav-course2-tab" data-toggle="tab" href="#nav-course2" role="tab" aria-controls="nav-course2" aria-selected="false">Year 2</a>
+                <a class="nav-item nav-link" id="nav-course3-tab" data-toggle="tab" href="#nav-course3" role="tab" aria-controls="nav-course3" aria-selected="false">Year 3</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="tab-pane fade show active" id="nav-course1" role="tabpanel" aria-labelledby="nav-course1-tab">
+          <% @program.course1.each do |element| %>
+            <ul>
+              <li><%= element %></li>
+            </ul>
+          <% end %>
+        </div>
+        <div class="tab-pane fade" id="nav-course2" role="tabpanel" aria-labelledby="nav-course2-tab">
+          <% @program.course2.each do |element| %>
+            <ul>
+              <li><%= element %></li>
+            </ul>
+          <% end %>
+        </div>
+        <div class="tab-pane fade" id="nav-course3" role="tabpanel" aria-labelledby="nav-course3-tab">
+          <% @program.course3.each do |element| %>
+            <ul>
+              <li><%= element %></li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+
+
       <div class="tab-pane fade" id="nav-requirements" role="tabpanel" aria-labelledby="nav-requirements-tab">
-          <h2>NO INFO AVAILABLE AT THE MOMENT</h2>
+         <h2><%= @program.name %></h2>
+         <p><%= @program.admission_requirements %></p>
         <!--   <i class="fas fa-euro-sign"></i><p><span class="title-bold">Price: </span><%= @program.price %></p>
           <p><span class="title-bold">Duration: </span><%= @program.duration %> months</p>
           <p><%= @program.description %></p> -->
@@ -88,13 +127,15 @@
                 <p><span class="title-bold">Rating: </span><%= review.rating %></p>
                 <p><%= review.content %></p>
                 <% if current_user == review.user %>
+
                   <div class ="btn-right">
-                    <div class="btn-review"><%= link_to "Edit your review", edit_program_review_path(@program, review) %></div>
-                    <div class="btn-review"><%= link_to "Delete your review", program_review_path(@program, review), method: :delete %></div>
+                    <div class="btn-review"><%= link_to "Edit", edit_program_review_path(@program, review) %></div>
+                    <div class="btn-review"><%= link_to "Delete", program_review_path(@program, review), method: :delete %></div>
                   </div>
                 <%end%>
                 <% if review.contact %>
                   <p class = "contact"> Contact <a href=""><%= mail_to review.user.email %> </a> for more information </p>
+
                 <%end%>
               </div>
             <%end%>
