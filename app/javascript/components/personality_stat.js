@@ -2,98 +2,100 @@ import ApexCharts from 'apexcharts'
 
 const stat = document.querySelector("#personality-stat")
 
-    export const personalityStat1 = () => {
-      var options = {
-      chart: {
-        animations: {
-        speed: 600,
-          animateGradually: {
-              enabled: true,
-              delay: 1
-          },
-          dynamicAnimation: {
-              enabled: true,
-              speed: 350
-          }
-        },
-        //height: 350,
-        type: 'radialBar',
-        toolbar: {
-          show: true
-        }
-      },
-      plotOptions: {
-        radialBar: {
-          startAngle: -135,
-          endAngle: 225,
-           hollow: {
-            margin: 0,
-            size: '70%',
-            background: '#fff',
-            image: undefined,
-            imageOffsetX: 0,
-            imageOffsetY: 0,
-            position: 'front',
-            dropShadow: {
-              enabled: true,
-              top: 3,
-              left: 0,
-              blur: 4,
-              opacity: 0.24
-            }
-          },
-          track: {
-            background: '#fff',
-            strokeWidth: '67%',
-            margin: 0, // margin is in pixels
-            dropShadow: {
-              enabled: true,
-              top: -3,
-              left: 0,
-              blur: 4,
-              opacity: 0.35
-            }
-          },
+if(stat){
 
-          dataLabels: {
-            showOn: 'always',
-            name: {
-              offsetY: -10,
-              show: true,
-              color: '#888',
-              fontSize: '17px'
-            },
-            value: {
-              formatter: function(val) {
-                return parseInt(val);
-              },
-              color: '#111',
-              fontSize: '36px',
-              show: true,
-            }
-          }
-        }
+ const personalityStat1 = () => {
+  var options = {
+  chart: {
+    animations: {
+    speed: 600,
+      animateGradually: {
+          enabled: true,
+          delay: 1
       },
-      fill: {
-        type: 'gradient',
-        gradient: {
-          shade: 'dark',
-          type: 'horizontal',
-          shadeIntensity: 0.5,
-          gradientToColors: ['#4278D6'],
-          inverseColors: true,
-          opacityFrom: 1,
-          opacityTo: 1,
-          stops: [0, 100]
-        }
-      },
-      series: [stat.dataset.openeness],
-      stroke: {
-        lineCap: 'round'
-      },
-      labels: ['Openeness'],
-
+      dynamicAnimation: {
+          enabled: true,
+          speed: 350
+      }
+    },
+    //height: 350,
+    type: 'radialBar',
+    toolbar: {
+      show: false
     }
+  },
+  plotOptions: {
+    radialBar: {
+      startAngle: -135,
+      endAngle: 225,
+       hollow: {
+        margin: 0,
+        size: '70%',
+        background: '#fff',
+        image: undefined,
+        imageOffsetX: 0,
+        imageOffsetY: 0,
+        position: 'front',
+        dropShadow: {
+          enabled: true,
+          top: 3,
+          left: 0,
+          blur: 4,
+          opacity: 0.24
+        }
+      },
+      track: {
+        background: '#fff',
+        strokeWidth: '67%',
+        margin: 0, // margin is in pixels
+        dropShadow: {
+          enabled: true,
+          top: -3,
+          left: 0,
+          blur: 4,
+          opacity: 0.35
+        }
+      },
+
+      dataLabels: {
+        showOn: 'always',
+        name: {
+          offsetY: -10,
+          show: true,
+          color: '#888',
+          fontSize: '17px'
+        },
+        value: {
+          formatter: function(val) {
+            return parseInt(val);
+          },
+          color: '#111',
+          fontSize: '36px',
+          show: true,
+        }
+      }
+    }
+  },
+  fill: {
+    type: 'gradient',
+    gradient: {
+      shade: 'dark',
+      type: 'horizontal',
+      shadeIntensity: 0.5,
+      gradientToColors: ['#4278D6'],
+      inverseColors: true,
+      opacityFrom: 1,
+      opacityTo: 1,
+      stops: [0, 100]
+    }
+  },
+  series: [stat.dataset.openeness],
+  stroke: {
+    lineCap: 'round'
+  },
+  labels: ['Openeness'],
+
+}
 
     var chart1 = new ApexCharts(
       document.querySelector("#chart1"),
@@ -103,7 +105,7 @@ const stat = document.querySelector("#personality-stat")
     chart1.render();
   }
 
-  export const personalityStat2 = () => {
+   const personalityStat2 = () => {
       var options = {
       chart: {
         animations: {
@@ -120,7 +122,7 @@ const stat = document.querySelector("#personality-stat")
         //height: 350,
         type: 'radialBar',
         toolbar: {
-          show: true
+          show: false
         }
       },
       plotOptions: {
@@ -204,13 +206,13 @@ const stat = document.querySelector("#personality-stat")
     chart2.render();
   }
 
-export const personalityStat3 = () => {
+ const personalityStat3 = () => {
       var options = {
       chart: {
         //height: 350,
         type: 'radialBar',
         toolbar: {
-          show: true
+          show: false
         }
       },
       plotOptions: {
@@ -294,13 +296,13 @@ export const personalityStat3 = () => {
     chart3.render();
   }
 
-export const personalityStat4 = () => {
+ const personalityStat4 = () => {
       var options = {
       chart: {
         //height: 350,
         type: 'radialBar',
         toolbar: {
-          show: true
+          show: false
         }
       },
       plotOptions: {
@@ -384,13 +386,13 @@ export const personalityStat4 = () => {
     chart4.render();
   }
 
-export const personalityStat5 = () => {
+ const personalityStat5 = () => {
       var options = {
       chart: {
         //height: 350,
         type: 'radialBar',
         toolbar: {
-          show: true
+          show: false
         }
       },
       plotOptions: {
@@ -473,5 +475,16 @@ export const personalityStat5 = () => {
 
     chart5.render();
   }
+
+// sliderValue();
+personalityStat1();
+personalityStat2();
+personalityStat3();
+personalityStat4();
+personalityStat5();
+
+}
+
+
 
 

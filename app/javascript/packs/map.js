@@ -1,4 +1,3 @@
-map.js
 import mapboxgl from 'mapbox-gl';
 
 const initMapbox = () => {
