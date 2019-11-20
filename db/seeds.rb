@@ -47,7 +47,7 @@ uni4.remote_photo_url = url4
 uni4.save
 
 
-cat1 = Category.create(name: "Economics and Business")
+cat1 = Category.create(name: "Economics and Business", icon: "team.svg")
 cat2 = Category.create(name: "Theology and Religious Studies")
 cat3 = Category.create(name: "Philosophy")
 cat4 = Category.create(name: "Law")
@@ -61,7 +61,7 @@ cat12 = Category.create(name: "Medicine")
 cat13 = Category.create(name: "Movement and Rehabilitation Sciences")
 cat14 = Category.create(name: "Pharmaceutical")
 cat15 = Category.create(name: "Public Health")
-cat16 = Category.create(name: "Computer Science and IT")
+cat16 = Category.create(name: "Computer Science and IT", icon:"ai.svg")
 cat17 = Category.create(name: "Event Management")
 
 
