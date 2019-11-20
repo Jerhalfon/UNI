@@ -128,13 +128,15 @@
                 <p><%= review.content %></p>
                 <% if current_user == review.user %>
 
-                  <div class="btn btn-primary"><%= link_to "Edit", edit_program_review_path(@program, review) %></div>
-                  <div class="btn btn-primary"><%= link_to "Delete", program_review_path(@program, review), method: :delete %></div>
-                  <% if review.contact %>
-                    <p class = "contact"> Contact <a href=""><%= review.user.email %> </a> for more information </p>
-                  <%end%>
+                  <div class ="btn-right">
+                    <div class="btn-review"><%= link_to "Edit", edit_program_review_path(@program, review) %></div>
+                    <div class="btn-review"><%= link_to "Delete", program_review_path(@program, review), method: :delete %></div>
+                  </div>
                 <%end%>
+                <% if review.contact %>
+                  <p class = "contact"> Contact <a href=""><%= mail_to review.user.email %> </a> for more information </p>
 
+                <%end%>
               </div>
             <%end%>
           <%end%>
