@@ -23,11 +23,12 @@ Mbti.destroy_all
 loca1 = Location.create(country: "Belgium", city: "Brussels")
 loca2 = Location.create(country: "Belgium", city: "Antwerp")
 loca3 = Location.create(country: "Belgium", city: "Namur")
-loca4 = Location.create(country: "England", city: "London")
-loca5 = Location.create(country: "Belgium", city: "Leuven")
+loca5 = Location.create(country: "Belgium", city: "Louvain-la-Neuve")
+loca6 = Location.create(country: "Belgium", city: "Leuven")
+loca7 = Location.create(country: "Belgium", city: "Gent")
 
-url1 = "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-uni1 = University.create(name: "ULB", location: loca1, address: "Avenue Franklin Roosevelt 50, 1050 Bruxelles")
+url1 = "https://jobday-sciences.be/static/companies/photos/ULB.png"
+uni1 = University.create(name: "Université Libre de Bruxelles", location: loca1, address: "Avenue Franklin Roosevelt 50, 1050 Bruxelles")
 uni1.remote_photo_url = url1
 uni1.save
 
@@ -36,15 +37,25 @@ uni2 = University.create(name: "Universiteit van Antwerpen", location: loca2, ad
 uni2.remote_photo_url = url2
 uni2.save
 
-url3 = "https://images.unsplash.com/photo-1474650919751-b7e21a1b180f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1650&q=80"
-uni3 = University.create(name: "  ", location: loca3, address: "Place de Londres 9, 1050 Ixelles")
+url3 = "https://ds1.static.rtbf.be/article/image/1248x702/5/c/8/b7ecd58bd8a373f0506bb75d4c559b49-1524823372.jpg"
+uni3 = University.create(name: "Université de Namur", location: loca3, address: "Rue de Bruxelles 61, 5000 Namur")
 uni3.remote_photo_url = url3
 uni3.save
 
 url4 = "https://images.unsplash.com/photo-1474650919751-b7e21a1b180f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1650&q=80"
-uni4 = University.create(name: "Université catholique de Louvain", location: loca5, address: "Place de l'Université 1, 1348 Ottignies-Louvain-la-Neuve")
+uni4 = University.create(name: "Université Catholique de Louvain", location: loca5, address: "Place de l'Université 1, 1348 Ottignies-Louvain-la-Neuve")
 uni4.remote_photo_url = url4
 uni4.save
+
+url6 = "https://www.kul.pl/files/956/gfx/strona_glowna/gmach_glowny.jpg"
+uni6 = University.create(name: "KU Leuven", location: loca6, address: "Oude Markt 13, 3000 Leuven")
+uni6.remote_photo_url = url6
+uni6.save
+
+url7 = "https://www.onlyengineerjobs.be/sites/default/files/ugent-jobs.png"
+uni7 = University.create(name: "Ghent University", location: loca7, address: "Oude Markt 13, 3000 Leuven")
+uni7.remote_photo_url = url7
+uni7.save
 
 
 cat1 = Category.create(name: "Economics and Business")
@@ -63,6 +74,63 @@ cat14 = Category.create(name: "Pharmaceutical")
 cat15 = Category.create(name: "Public Health")
 cat16 = Category.create(name: "Computer Science and IT")
 cat17 = Category.create(name: "Event Management")
+
+
+Program.create( university: uni1,
+                category: cat1,
+                name: "Bachelor in Business Engineering",
+                price: 835,
+                level: "Bachelor",
+                duration: 36,
+                description: "This bachelor's degree provides the student with all the basic knowledge and skills in management and the exact sciences as well as courses in general culture and languages. It also aims to train the student in the study of management sciences in a master's degree. This training will allow the student to understand all the organizational aspects of a company. The program consists of a broad core curriculum, supplemented by optional courses grouped into minors. Minor girls allow students to gradually start their specialization.",
+                application_deadline: "September 30th, 2020",
+                student_profile: "",
+                admission_requirements: "No specific entry requitements for this program.",
+                language: "French",
+                course1: ["General chemistry", "Introduction to microeconomics", "Introduction to macroeconomics", "Economic geography", "Financial accounting", "Economic history: companies, industry, organizations", "Mathematics for management : analysis and linear algebra", "Fundamental knowledge and elements of physics", "Descriptive statistics and elements of probability", "English - Dutch"],
+                course2: ["Industrial applications of chemistry", "Private law and economic law", "Monetary theory I", "Corporate accounting and financial statement analysis", "Introduction to organizations and social responsibility (Mindful Leadership and CSR Chair)", "Computer science", "Mathematics : Linear algebra II and functions of several variables", "Information technology physics", "Probability, statistical inference and operational research", "English I", "Dutch I"],
+                course3: ["Tax law", "Psychology and labour law", "Human resources management", "Financial theory", "Marketing management", "Management control", "Introduction to econometrics", "Economic and social development", "Multidisciplinary seminar on science and technology - Communication techniques", "Theory of innovation and entrepreneurship", "English II", "Business Dutch"],
+)
+
+Program.create( university: uni4,
+                category: cat1,
+                name: "Master in Public Health",
+                price: 0,
+                level: "Bachelor",
+                duration: 24,
+                description: "",
+                application_deadline: "September 30th, 2020",
+                student_profile: "",
+                admission_requirements: "",
+                language: "French"
+)
+
+Program.create( university: uni6,
+                category: cat1,
+                name: "Master in Public Health",
+                price: 0,
+                level: "Bachelor",
+                duration: 24,
+                description: "",
+                application_deadline: "September 30th, 2020",
+                student_profile: "",
+                admission_requirements: "",
+                language: "French"
+)
+
+Program.create( university: uni7,
+                category: cat1,
+                name: "Master in Public Health",
+                price: 0,
+                level: "Bachelor",
+                duration: 24,
+                description: "",
+                application_deadline: "September 30th, 2020",
+                student_profile: "",
+                admission_requirements: "",
+                language: "French"
+)
+
 
 
 Program.create( university: uni4,

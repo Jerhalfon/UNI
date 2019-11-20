@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_19_140448) do
+ActiveRecord::Schema.define(version: 2019_11_20_104507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,9 @@ ActiveRecord::Schema.define(version: 2019_11_19_140448) do
     t.string "student_profile"
     t.string "admission_requirements"
     t.string "language"
+    t.text "course1", default: [], array: true
+    t.text "course2", default: [], array: true
+    t.text "course3", default: [], array: true
     t.index ["category_id"], name: "index_programs_on_category_id"
     t.index ["university_id"], name: "index_programs_on_university_id"
   end
