@@ -1,14 +1,15 @@
-<h2>Our Programs</h2>
-<% if !user_signed_in? %>
-<% elsif current_user.admin == true %>
-  <%= link_to "Add a program", admin_universities_path(:admin) %>
-<% else %>
-<% end %>
-<div class="container container-index flex-search">
-  <div>
-    <%= simple_form_for @program, method: :get, url: programs_path do |f| %>
-      <%= f.input :name, input_html: {value: @name } %>
-
+<div class="body-index-program">
+  <h2>Our Programs</h2>
+  <div class="line-title"></div>
+  <% if !user_signed_in? %>
+  <% elsif current_user.admin == true %>
+    <%= link_to "Add a program", admin_universities_path(:admin) %>
+  <% else %>
+  <% end %>
+  <div class="container-index flex-search">
+    <div>
+      <%= simple_form_for @program, method: :get, url: programs_path do |f| %>
+        <%= f.input :name, input_html: {value: @name } %>
       <%= f.label :price, name: "Price", id: "program_price_label", label: "Price: 0/100,000" %>
       <%= range_field :program, :price, in: 0..100000, value: 0, class: "price-value-slider" %>
      <%= f.association :category,   prompt: "Select category" , selected: @category.class == Array ? nil : @category  %>
@@ -20,34 +21,35 @@
                     label_method: :city_and_country,
                     value_method: :id,
                     input_html: {value: @location_id } %>
+        <% end %>
+        <%= f.submit "Search", value: "search", class: "btn-home-form" %>
       <% end %>
-      <%= f.submit "Search", value: "search" %>
-    <% end %>
-  </div>
+    </div>
 
-  <div class="cards-index">
-    <% @programs.each do |program| %>
-      <div class="card-product height-card">
-<!--           <img src="https://images.unsplash.com/20/cambridge.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1630&q=80" />-->
-          <%= link_to program_favorites_path(program), method: :post do %>
-            <span class="change-icon-programs change-icon">
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart"></i>
-            </span>
-          <% end %>
+    <div class="cards-index">
+      <% @programs.each do |program| %>
+        <div class="card-product height-card">
+  <!--           <img src="https://images.unsplash.com/20/cambridge.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1630&q=80" />-->
+            <%= link_to program_favorites_path(program), method: :post do %>
+              <span class="change-icon-programs change-icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+              </span>
+            <% end %>
 
 
-          <div class="card-product-infos">
-            <div class="card-product-img" style="background-image: url('<%= cl_image_path program.university.photo %>')"></div>
-            <div class="card-product-right">
-              <h2><%= program.university.name %></h2>
-              <h3><%= link_to program.name, program_path(program) %></h3>
-              <p><strong>Duration: </strong><%= program.duration %></p>
-              <p><strong>Price: </strong><%= program.price %></p>
-              <p><%= program.description[0..500]%><strong>Read More</strong></p>
+            <div class="card-product-infos">
+              <div class="card-product-img" style="background-image: url('<%= cl_image_path program.university.photo %>')"></div>
+              <div class="card-product-right">
+                <h2><%= program.university.name %></h2>
+                <h3><%= link_to program.name, program_path(program) %></h3>
+                <p><strong>Duration: </strong><%= program.duration %></p>
+                <p><strong>Price: </strong><%= program.price %></p>
+                <p><%= program.description[0..500]%><strong>Read More</strong></p>
+              </div>
             </div>
-          </div>
-      </div>
-    <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

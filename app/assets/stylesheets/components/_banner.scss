@@ -55,3 +55,35 @@ img.hat {
     0% { transform: translateY(0); }
     100% { transform: translateY(-10px); }
 }
+
+.arrow {
+  box-sizing: border-box;
+  height: 2vw;
+  width: 2vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 4px 4px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+
+.arrow:hover {
+  border-bottom-width: 8px;
+  border-right-width: 8px;
+}
+
+.arrow-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: absolute;
+  top: 45vh;
+  left: 50vw;
+  z-index: 1;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
