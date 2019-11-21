@@ -2,12 +2,12 @@
     </div>
 <div class="container-personnality">
   <div class="profile-mbti">
-    <div>
+    <div id="mbti-image">
       <%= cl_image_tag( @my_mbti.icon, width:260, height: 260 )%>
     </div>
     <div>
-      <h3>  Your profile coresponds to </h3>
-      <h1>  <%= @my_mbti.name %> </h1>
+      <h3 id="profile-announcement">  Your profile coresponds to </h3>
+      <h1 id="mbti-name">  <%= @my_mbti.name %> </h1>
     </div>
   </div>
   <div class="personality-results ">
@@ -31,7 +31,8 @@
     <div class="category-cards">
       <% @my_mbti.categories.each do |category| %>
         <div class="my-category-card">
-          <%= link_to category.name, mbti_category_path(@mbti_id, category) %>
+          <%= image_tag(category.icon, size: 48) %>
+          <p id="cat-name"><%= link_to category.name, mbti_category_path(@mbti_id, category) %></p>
         </div>
       <% end %>
     </div>
