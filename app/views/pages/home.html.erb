@@ -1,8 +1,8 @@
 <div class="banner">
   <img src="<%= image_path("hat.png")%>" class="hat" />
   <div class="container">
-    <h1>Take the right decision for your future!</h1>
-    <p>And take our IBM Watson personality test</p>
+    <h1>Choose the right program for your future!</h1>
+    <p>Thanks to our IBM-powered Watson personality test</p>
     <div><%= link_to "Take the test", description_path, class: "red-button" %></div>
   </div>
   <div class="arrow-down">
@@ -14,37 +14,37 @@
 
 <div class="body-home">
   <div class="concept" id="concept">
-    <h2>Our concept</h2>
-    <div class="line-title"></div>
+    <!-- <h2>Our concept</h2>
+    <div class="line-title"></div> -->
+
     <div class="concept-line"></div>
     <div class="bulles">
       <div class="bulle">
         <div class="round">
-          <i class="far fa-comments"></i>
+          <%= image_tag("checklist.png", size: 70)  %>
         </div>
-        <h3>Explore</h3>
-        <p>Get information about different courses and  universities.</p>
+        <div class="concept-test">
+          <h3>YOU</h3>
+          <p>Take our personality test</p>
+        </div>
       </div>
       <div class="bulle">
         <div class="round">
-          <i class="far fa-comments"></i>
+          <%= image_tag("research.png", size: 70)  %>
         </div>
-        <h3>Explore</h3>
-        <p>Get information about different courses and  universities.</p>
+        <div class="concept-test">
+          <h3>WE</h3>
+          <p>Analyse and give you the programs that suit you best</p>
+        </div>
       </div>
       <div class="bulle">
         <div class="round">
-          <i class="far fa-comments"></i>
+          <%= image_tag("filter.png", size: 60)  %>
         </div>
-        <h3>Explore</h3>
-        <p>Get information about different courses and  universities.</p>
-      </div>
-      <div class="bulle">
-        <div class="round">
-          <i class="far fa-comments"></i>
+        <div class="concept-test">
+          <h3>YOU</h3>
+          <p>Explore and refine the results</p>
         </div>
-        <h3>Explore</h3>
-        <p>Get information about different courses and  universities.</p>
       </div>
     </div>
     <div class="concept-button"><%= link_to "Take the test", description_path, class: "red-button" %></div>
