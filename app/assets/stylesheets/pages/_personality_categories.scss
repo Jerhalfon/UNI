@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 1000px;
 }
 
 .personality-trait {
@@ -20,14 +19,15 @@
   width: 1096px;
   margin: 0 auto;
   text-align: center;
-  background-color: white;
   height: 100vh;
 }
 
 .profile-mbti {
   display: flex;
   align-items: center;
-  margin-left: 60px;
+  justify-content: center;
+  margin-bottom: 46px;
+  position: relative;
 }
 
 .profile-mbti h1 {
@@ -39,6 +39,9 @@
 
 #mbti-image {
   opacity: 0;
+  position: absolute;
+  left: 189px;
+  top: -5px;
 }
 
 .profile-mbti h3 {
@@ -51,12 +54,15 @@
 }
 
 .categories-explanation {
-  margin-top: -54px;
+  margin-top: -124px;
   padding-top: 164px;
   text-align: center;
   background-color: #4278D6;
   color: white;
   clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mbti-description {
@@ -68,15 +74,24 @@
 .mbti-description p {
   width: 756px;
   color: white;
+  padding-top: 24px;
+
 }
 
 .category-cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 40%;
+}
+
+.personality-announcement {
+  transition: opacity ease-in 1s;
 }
 
 #profile-announcement {
-  transition: opacity ease-in 3s;
+  transition: opacity ease-in 2.5s;
 }
 .my-category-card {
   border-radius: 10px;
@@ -92,4 +107,8 @@
 
 #cat-name {
   margin-top: 26px;
+}
+
+#box-mbti {
+  margin-top: 22px;
 }

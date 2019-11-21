@@ -2,12 +2,12 @@
     </div>
 <div class="container-personnality">
   <div class="profile-mbti">
-    <div id="mbti-image">
-      <%= cl_image_tag( @my_mbti.icon, width:260, height: 260 )%>
+    <div id="mbti-image" class="personality-announcement">
+      <%= cl_image_tag( @my_mbti.icon, width:240, height: 240 )%>
     </div>
-    <div>
+    <div id="box-mbti">
       <h3 id="profile-announcement">  Your profile coresponds to </h3>
-      <h1 id="mbti-name">  <%= @my_mbti.name %> </h1>
+      <h1 id="mbti-name" class="personality-announcement">  <%= @my_mbti.name %> </h1>
     </div>
   </div>
   <div class="personality-results ">
