@@ -1,5 +1,5 @@
 meta_product_name: "YoUni"
 meta_title: "Take the right decision for your future!"
 meta_description: "And take our IBM Watson personality test"
-meta_image: "uni-cover.png" # should exist in `app/assets/images/`
+meta_image: "photo_cropped.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cardsra
