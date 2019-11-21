@@ -4,6 +4,7 @@ import { initMapbox } from '../plugins/ini_mapbox';
 import Sortable from 'sortablejs';
 import {sliderValue} from "../components/slider";
 import "../components/personality_stat";
+import "../components/description";
 console.log(sliderValue)
 initMapbox();
 sliderValue();
@@ -17,5 +18,5 @@ if (sortableCard) {
   });
 }
 
-smoothScroll.init();
+// smoothScroll.init();
 
