@@ -17,5 +17,5 @@ if (sortableCard) {
   });
 }
 
-smoothScroll.init();
+// smoothScroll.init();
 
