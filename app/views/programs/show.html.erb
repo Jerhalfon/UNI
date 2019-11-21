@@ -64,7 +64,7 @@
         <div class="tab">
           <div class="tab-left">
             <nav>
-              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <div class="nav nav-tabs show active" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link" id="nav-course1-tab" data-toggle="tab" href="#nav-course1" role="tab" aria-controls="nav-course1" aria-selected="true">Year 1</a>
                 <a class="nav-item nav-link" id="nav-course2-tab" data-toggle="tab" href="#nav-course2" role="tab" aria-controls="nav-course2" aria-selected="false">Year 2</a>
                 <a class="nav-item nav-link" id="nav-course3-tab" data-toggle="tab" href="#nav-course3" role="tab" aria-controls="nav-course3" aria-selected="false">Year 3</a>
@@ -72,21 +72,21 @@
             </nav>
           </div>
         </div>
-        <div class="tab-pane fade show active" id="nav-course1" role="tabpanel" aria-labelledby="nav-course1-tab">
+        <div class="tab-pane test fade show active" id="nav-course1" role="tabpanel" aria-labelledby="nav-course1-tab">
           <% @program.course1.each do |element| %>
             <ul>
               <li><%= element %></li>
             </ul>
           <% end %>
         </div>
-        <div class="tab-pane fade" id="nav-course2" role="tabpanel" aria-labelledby="nav-course2-tab">
+        <div class="tab-pane test fade" id="nav-course2" role="tabpanel" aria-labelledby="nav-course2-tab">
           <% @program.course2.each do |element| %>
             <ul>
               <li><%= element %></li>
             </ul>
           <% end %>
         </div>
-        <div class="tab-pane fade" id="nav-course3" role="tabpanel" aria-labelledby="nav-course3-tab">
+        <div class="tab-pane test fade" id="nav-course3" role="tabpanel" aria-labelledby="nav-course3-tab">
           <% @program.course3.each do |element| %>
             <ul>
               <li><%= element %></li>
