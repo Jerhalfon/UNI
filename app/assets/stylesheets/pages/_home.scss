@@ -34,6 +34,7 @@ h3 {
   color: white;
   border-radius: 3px;
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .red-button:hover {
@@ -215,11 +216,13 @@ h3 {
 }
 
 .concept {
+  margin-top: 130px;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 50px;
 
   .line-title {
     width: 100px;
@@ -235,17 +238,18 @@ h3 {
 }
 
 .concept-line {
-  width: 65vw;
+  width: 52vw;
   height: 1px;
   background-color: grey;
   position: absolute;
-  top: 120vh;
+  top: 125vh;
 }
 
 .bulles {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 70vw;
+  margin-bottom: 30px;
 }
 
 .bulle {
@@ -260,8 +264,8 @@ h3 {
 }
 
 .round {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border: 2px solid #4278D6;
   background-color: #EEFCFF;
   border-radius: 100px;
@@ -305,3 +309,9 @@ h3 {
   }
 
 }
+
+.concept-test {
+  margin-top: 20px;
+}
+
+

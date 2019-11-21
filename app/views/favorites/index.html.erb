@@ -4,7 +4,7 @@
   <div id="sortableCard" class="cards-favorite">
     <% @favorites.each do |favorite|%>
       <div class="card-favorite" id="favorite-<%= favorite.id %>">
-        <div class="image-favorite" >
+        <div class="image-favorite" style="background-image: url('<%= cl_image_path favorite.program.university.photo %>')">
           <%= link_to favorite_path(favorite), method: :delete, remote: true, class: 'delete-favorite delete-favorite-icon' do %>
               <i class="fas fa-times"></i>
           <% end %>
