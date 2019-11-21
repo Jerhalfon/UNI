@@ -75,17 +75,29 @@ cat15 = Category.create(name: "Public Health")
 cat16 = Category.create(name: "Computer Science and IT")
 cat17 = Category.create(name: "Event Management")
 
-
-Program.create( university: uni1,
+#
+prog1 =Program.create( university: uni1,
                 category: cat1,
                 name: "Bachelor in Business Engineering",
                 price: 835,
                 level: "Bachelor",
                 duration: 36,
-                description: "This bachelor's degree provides the student with all the basic knowledge and skills in management and the exact sciences as well as courses in general culture and languages. It also aims to train the student in the study of management sciences in a master's degree. This training will allow the student to understand all the organizational aspects of a company. The program consists of a broad core curriculum, supplemented by optional courses grouped into minors. Minor girls allow students to gradually start their specialization.",
+                description: "This bachelor's degree provides the student with all the basic knowledge and skills in management and the exact sciences as well as courses in general culture and languages. It also aims to train the student in the study of management sciences in a master's degree. This training will allow the student to understand all the organizational aspects of a company. The program consists of a broad core curriculum, supplemented by optional courses grouped into minors. Minor girls allow students to gradually start their specialization.
+
+                ULB offers a number of activities and resources that can help you develop a successful strategy before or during your studies.
+
+You can make the transition to higher education easier by attending preparatory courses, summer classes, and information and orientation sessions, even before you start your studies at ULB.
+
+During your studies, many people at ULB are there specifically to help you succeed: support staff in each faculty, (inter-)faculty guidance counsellors, tutors, and experts in academic methodology.",
                 application_deadline: "September 30th, 2020",
                 student_profile: "",
-                admission_requirements: "No specific entry requitements for this program.",
+                admission_requirements: "You wish to develop your skills in the management of business engineering;
+you seek to develop concrete in-company experience and participate in the management of complex and innovative projects;
+you are looking for a high-quality education, based on solid scientific knowledge, in the area of high-tech industry and services;
+you are motivated by entrepreneurial drive and a desire to learn how to work effectively in a team;
+you wish to become a manager.
+Applications and requests for further information should be addressed to the programme director.
+It is up to the programme director to agree all requests for exemption, equivalences between different subjects and entry by means of a special personal file. She is also responsible for agreeing the individual programme of each student.",
                 language: "French",
                 course1: ["General chemistry", "Introduction to microeconomics", "Introduction to macroeconomics", "Economic geography", "Financial accounting", "Economic history: companies, industry, organizations", "Mathematics for management : analysis and linear algebra", "Fundamental knowledge and elements of physics", "Descriptive statistics and elements of probability", "English - Dutch"],
                 course2: ["Industrial applications of chemistry", "Private law and economic law", "Monetary theory I", "Corporate accounting and financial statement analysis", "Introduction to organizations and social responsibility (Mindful Leadership and CSR Chair)", "Computer science", "Mathematics : Linear algebra II and functions of several variables", "Information technology physics", "Probability, statistical inference and operational research", "English I", "Dutch I"],
@@ -93,7 +105,7 @@ Program.create( university: uni1,
 )
 
 Program.create( university: uni4,
-                category: cat1,
+                category: cat15,
                 name: "Master in Public Health",
                 price: 0,
                 level: "Bachelor",
@@ -106,7 +118,7 @@ Program.create( university: uni4,
 )
 
 Program.create( university: uni6,
-                category: cat1,
+                category: cat15,
                 name: "Master in Public Health",
                 price: 0,
                 level: "Bachelor",
@@ -119,7 +131,7 @@ Program.create( university: uni6,
 )
 
 Program.create( university: uni7,
-                category: cat1,
+                category: cat15,
                 name: "Master in Public Health",
                 price: 0,
                 level: "Bachelor",
@@ -144,17 +156,41 @@ Program.create( university: uni4,
                         student_profile: "",
                         admission_requirements: "" ,
                         language:"English")
-Program.create( university: uni4,
+prog2 = Program.create( university: uni4,
                         category: cat1,
                         name: "Master in Economics: General",
                         price: 0 ,
                         level: "Master",
                         duration: 24,
-                        description: "The master focuses on the general, specific, personal and openness skills. The offer of specialisations is based on the areas of expertise of the Economics School of Louvain (ESL): growth and globalisation, development, finance, economy and society, economic policy, Firm strategy & Innovation, European Business, Research oriented.",
+                        description: "The master focuses on the general, specific, personal and openness skills. The offer of specialisations is based on the areas of expertise of the Economics School of Louvain (ESL): growth and globalisation, development, finance, economy and society, economic policy, Firm strategy & Innovation, European Business, Research oriented.
+                        This training will give you
+
+a chance to develop the skills necessary for « problem solvers » to understand and analyse today’s concrete economic and social questions;
+a specialisation as a function of your professional objectives and personal tastes (specialised goal) or an advanced training in economics as preparation for research (in-depth goal);
+an interdisciplinary approach thanks to the wide range of options in disciplines complementary to economics;
+high-quality instruction within the Economics School of Louvain (ESL), which brings together the UCL and the University of Namur (UNamur);
+the possibility to participate in one of our international masters, with a one-year stay at one of our partner universities (Geneva, Maastricht, Milan, Lisbon, Warsaw).",
                         application_deadline: "",
                         student_profile: "",
-                        admission_requirements: "",
-                        language: "English" ,)
+                        admission_requirements: "
+                        Holders of a first university degree including at least the following subjects :
+
+Microeconomics (5 credits)
+Macroeconomics (5 credits)
+Statistics in Economics and Management II (5 credits)
+Mathematics in Economics and Management II (5 credits)
+Econometrics (5 credits)
+-1(“-1”? appears as such in the French version) from : Public Economics (5 credits), Industrial Economics (5 credits), European Economics (5 credits), Game Theory and Information Economics (5 credits)
+Individually tailored access
+
+It is up to the academic coordinator to agree both equivalences between subjects and any additional components. If the total of prerequisite subjects is more than 15 credits, entry to the Master programme is conditional on the successful completion of a preparatory year and gaining a maximum of 60 credits
+You wish to benefit from a solid and versatile training that will enable you to master the foundations of economics;
+you envisage exploring certain more specialised questions relating to the economic world in greater depth;
+you wish to acquire skills that give access to high-level professional careers.",
+                        language: "English" ,
+                        course1: ["Introduction to microeconomics", "Introduction to macroeconomics", "Economic geography", "Financial accounting", "Economic history: companies, industry, organizations", "Mathematics for management : analysis and linear algebra", "Fundamental knowledge and elements of physics", "Descriptive statistics and elements of probability",],
+                        course2: ["Industrial applications of chemistry", "Private law and economic law", "Monetary theory I", "Corporate accounting and financial statement analysis", "Introduction to organizations and social responsibility (Mindful Leadership and CSR Chair)", "Computer science", "Mathematics : Linear algebra II and functions of several variables", "Probability, statistical inference and operational research", "English I", "Dutch I"],
+                        course3: ["Tax law", "Psychology and labour law", "Human resources management", "Financial theory", "Marketing management", "Management control", "Introduction to econometrics", "Economic and social development", "Multidisciplinary seminar on science and technology - Communication techniques", "Theory of innovation and entrepreneurship", "English II", "Business Dutch"],)
 
 Program.create( university: uni4,
                         category: cat2,
@@ -646,7 +682,7 @@ Program.create( university: uni4,
 It is up to the programme director to agree all requests for exemption, equivalences between different subjects and entry by means of a special personal file. She is also responsible for agreeing the individual programme of each student.",
                         language:  ["English", "French"])
 
-Program.create( university: uni1,
+prog3 = Program.create( university: uni1,
                 category: cat1,
                 name: "Master in Business Engineering",
                 price: 0,
@@ -1034,17 +1070,116 @@ Program.create( university: uni1,
                 language: "French"
 )
 
+puts ">>creating users"
 
-user1 = User.create(email: "user1@email.com", password: "123456")
-user2 = User.create(email: "user2@email.com", password: "123456")
-user3 = User.create(email: "user3@email.com", password: "123456")
+user1 = User.create(
+  email: "bert.bollen@gmail.com",
+  password: "123456",
+  name: "Bert",
+  last_name: "Bollen",
+  photo: Rails.root.join("app/assets/images/lunettes.jpg").open)
+
+user2 = User.create(
+  email: "charlotte.yun@gmail.com",
+  password: "123456",
+  name: "Charlotte",
+  last_name: "Yun",
+  photo: Rails.root.join("app/assets/images/chinese.jpg").open)
+
+user3 = User.create(
+  email: "slumdog.jamal@outlook.com",
+  password: "123456",
+  name: "Jamal",
+  last_name: "india",
+  photo: Rails.root.join("app/assets/images/jamal.jpg").open)
+
+
+user4 = User.create(
+  email: "agathe.piethe@google.com",
+  password: "123456",
+  name: "Agathe",
+  last_name: "Piette",
+  photo: Rails.root.join("app/assets/images/agathe.jpg").open)
+
+user5 = User.create(
+  email: "micheal.roslokov@outlook.com",
+  password: "123456",
+  name: "micheal",
+  last_name: "roslokov",
+  photo: Rails.root.join("app/assets/images/micheal.jpg").open)
+
+user6 = User.create(
+  email: "negative.nancy@gmail.com",
+  password: "123456",
+  name: "nancy",
+  last_name: "negative",
+  photo: Rails.root.join("app/assets/images/jamal.jpg").open)
+
+puts ">>users created"
 
 # favo1 = Favorite.create(user: user1, program: prog1)
 # favo2 = Favorite.create(user: user1, program: prog2)
 
-# review1 = Review.create(content: "This university has the worst professors don't apply here!", rating: 1, title: "prog1 review", program: prog1, user: user1)
-# review2 = Review.create(content: "Really cool University! Recomended ^^", rating: 5, title: "prog2 review", program: prog2, user: user2)
-# review3 = Review.create(content: "Good professors but reaaaly boring!", rating: 3, title: "prog3 review", program: prog3, user: user3)
+puts ">>creating reviews"
+
+review1 = Review.create(
+        content: "I have been out of education for few years before deciding to follow on my passions and get a degree in Business. As an adult with responsibility and no economical support for living expenses, I expected it be very hard to start and follow on my studies and to my surprise the staff at this university is not only very welcoming but also very understanding and caring about their students. I have a clear feeling that a key factor for the Uni is employability and a personal course of studies. I have had instances where I was given access to animation labs through a Fine Art module, because I choose to try and do a stop motion animation. Instead of convincing me to stick to what is most commonly done in Fine Arts, they supported me and went the extra mile to help me complete my project and even rewarded me for the extra effort. There are some truly great people working and the Uni have plans to expand even further in the near future",
+        rating: 5,
+        title: "Very good university!",
+        program: prog1,
+        user: user1,
+        contact: true
+        )
+
+review2 = Review.create(
+        content: "Each Belgian region has its own house, where tey have parties, and they're much more fun than the city bars and cafés. It's hard to go out at night in Brussels if you ave no car - public transportation between Brussels and Louvain stops around 11 PM. Week-ends are terribly dull if you don't travel around the country (many beautiful cities to visit up north, in the Flemish area). All Belgians get back to their parents' on Friday afternoon. The local cinema has cheap sneak previews.",
+        rating: 4,
+        title: "Student life",
+        program: prog1,
+        user: user2,
+        contact: true
+        )
+
+
+review3 = Review.create(
+        content: "Amazing university. A lot of great professors. Many bachelors and masters options.
+I also really like the location which is in a diverse environment.
+The university is ecological and making effort everyday to strive on this issue.
+Many opportunities and activities.
+I am very proud to be part of the university.
+ Overall",
+        rating: 5,
+        title: "Amazing University",
+        program: prog1,
+        user: user3,
+        contact: true)
+
+review4 = Review.create(
+        content: "What I really like is that Louvain-la-Neuve is a university city, so you will mainly find students living there. Even if the city itself is not so beautiful, you won't find such an atmosphere elsewhere. This city never sleeps ; from Monday to Friday, party is everywhere in town. Life is pretty simple there ; do not expect anything big or exceptional. About the courses, I would say teachers are pretty helpful if you come find them. What I mean is, it is up to you. I you want to come and be unnoticed, you can. But if you need explanations, teachers will find a way to help. I could not find any negative aspect. I really recommend Louvain-la-Neuve to study. You will make memories for a life.",
+        rating: 4,
+        title: "What studying in Louvain-la-Neuve looks like",
+        program: prog2,
+        user: user4,
+        contact: true)
+
+review5 = Review.create(
+        content: "Studying at the Catholic University of Louvain was one of the best decisions I have ever taken. The level of education is really high, professors and teaching assistants are very well trained, a lot of international students are present on campus and the student life is also very exciting. My Bachelor's degree in Political Science was very general and so I was able to build a strong general knowledge. The Master's degree in International Relations is way more specific and the courses are very interesting. The city is also not far away from Brussels, which is a nice city to travel to.",
+        rating: 5,
+        title: "You will not regret it",
+        program: prog2,
+        user: user5,
+        contact: true)
+
+review6 = Review.create(
+        content: "The level of education, partnerships, the university has, and teachers, is satisfactory. But the belgian system (many exams, and all heavy), makes you have no time to assimilate concepts, and in the end you only acquire them for the exam date, as you have time to study for the exams just the month before,as before that, they charge you with loads of project, group works, and manythings which are not useful for the exam at all, it s just extra work. Many teachers are not available at all (there are no office hours). They have pedagogic methods, and the form of teaching is pretty academic and formal, old school. Many quantitATIVE classes, as mathematics, statistics, econometrics, have no tutorials, or just 2 per semester, that it's just not acceptable in RESEARCH MASTER IN ECONOMICS, like mine is. Many teachers require projects in stata but do not make any introductory class of stata at the beginning. Many classes require exercises, that are never corrected and handed back nor graded, so you basically never know if you did right or wrong, and there are sometimes no assistants to help you. The hours of classes are never enough to cover the huge programs, so courses are not always enlightening to make you understand everything, and basically everything you ve to do it on your own at home. Teachers are mostly focused on research than on didactics, and some classes seem covering the easiest topics, and have a feasible level of difficulty, and then much more complicated stuff at the exam, or applications of the theory that were never covered in class. In some classes, they do not explain some tools or theorems, assuming you already know them, that should be not the case, from the moment that everyone is accepted in the Master, without grades requirements in the bachelor (nor they check the programs of your previous exams and tell you to have some extra classes to catch up). In the Research Master, there are too many optional classes, it would be better to have less, only the advanced and most important, to focus onbetter on them (I think it is the same in the professional ones). Nonetheless the cost of the Master is quite low (835euros for europeans, can be reduced to 500 euros more or less, if you fufill some requirements of low revenus, and almost 3000 euros for extra EU students), that is a fair price for the services offered (trains are refunded, and many discounts for students are available), and many students rooms are available on the campus. The ambiance is a bit too funny in Louvain la Neuve, to focus, but at least (if you leave here), the university provides for many things (also technical support for houses), and the organisation is not that bad. There are many conferences and important personalities coming, and the environment is stimulating and pretty international. Many cultural events are organised, and extra activities as well.",
+        rating: 4,
+        title: "Good education but failing system",
+        program: prog2,
+        user: user6,
+        contact: true)
+
+puts ">>reviews created"
+
 
 
 mbti1 = Mbti.create(name: "The Supervisor", combination: [false, true, true, true], explanation: "Supervisors are hardworking traditionalists, eager to take charge in organizing projects and people. Orderly, rule-abiding, and conscientious, Supervisors like to get things done, and tend to go about projects in a systematic and methodical way. Therefore, we could recommend studying law to become a judge or lawyer, or become a project manager or insurance sales agent by studying economics and business.")
