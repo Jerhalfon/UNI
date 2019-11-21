@@ -104,63 +104,12 @@ It is up to the programme director to agree all requests for exemption, equivale
                 course3: ["Tax law", "Psychology and labour law", "Human resources management", "Financial theory", "Marketing management", "Management control", "Introduction to econometrics", "Economic and social development", "Multidisciplinary seminar on science and technology - Communication techniques", "Theory of innovation and entrepreneurship", "English II", "Business Dutch"],
 )
 
-Program.create( university: uni4,
-                category: cat15,
-                name: "Master in Public Health",
-                price: 0,
-                level: "Bachelor",
-                duration: 24,
-                description: "",
-                application_deadline: "September 30th, 2020",
-                student_profile: "",
-                admission_requirements: "",
-                language: "French"
-)
 
-Program.create( university: uni6,
-                category: cat15,
-                name: "Master in Public Health",
-                price: 0,
-                level: "Bachelor",
-                duration: 24,
-                description: "",
-                application_deadline: "September 30th, 2020",
-                student_profile: "",
-                admission_requirements: "",
-                language: "French"
-)
-
-Program.create( university: uni7,
-                category: cat15,
-                name: "Master in Public Health",
-                price: 0,
-                level: "Bachelor",
-                duration: 24,
-                description: "",
-                application_deadline: "September 30th, 2020",
-                student_profile: "",
-                admission_requirements: "",
-                language: "French"
-)
-
-
-
-Program.create( university: uni4,
-                        category: cat1 ,
-                        name: "Master in Econommics: Econometrics",
-                        price: 0 ,
-                        level: "Undergraduate",
-                        duration: 24,
-                        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem, officiis labore? Delectus maxime officia, saepe cumque asperiores perspiciatis fuga, optio, repellat laborum voluptatum eos nesciunt enim placeat numquam doloremque?",
-                        application_deadline: "",
-                        student_profile: "",
-                        admission_requirements: "" ,
-                        language:"English")
 prog2 = Program.create( university: uni4,
                         category: cat1,
-                        name: "Master in Economics: General",
+                        name: "Bachelor in Economics: General",
                         price: 0 ,
-                        level: "Master",
+                        level: "Bachelor",
                         duration: 24,
                         description: "The master focuses on the general, specific, personal and openness skills. The offer of specialisations is based on the areas of expertise of the Economics School of Louvain (ESL): growth and globalisation, development, finance, economy and society, economic policy, Firm strategy & Innovation, European Business, Research oriented.
                         This training will give you
