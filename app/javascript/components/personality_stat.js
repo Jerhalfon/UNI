@@ -1,11 +1,13 @@
 import ApexCharts from 'apexcharts'
 
 const displayMbti = () => {
+
   const stat = document.querySelector("#personality-stat")
   if (!stat) return null
   const stats = Object.values(stat.dataset)
   const statsInteger = stats.map((stat) =>{
-   return parseFloat(stat);
+    const yStat = parseFloat(stat);
+    return (yStat > 50) ? yStat : (yStat + 40);
   });
   const maxStat = Math.max(...statsInteger);
 
@@ -100,13 +102,13 @@ const displayMbti = () => {
         ...basicOptions.chart,
         events: {
           animationEnd: function(chartContext, config) {
-            if (parseFloat(stat.dataset.openeness) === maxStat) {
+            if (parseFloat(statsInteger[0]) === maxStat) {
               appear(profileAnnouncement);
             }
           }
         },
       },
-      series: [stat.dataset.openeness],
+      series: [statsInteger[0]],
       labels: ['Openeness'],
     }
 
@@ -125,13 +127,13 @@ const displayMbti = () => {
         ...basicOptions.chart,
         events: {
           animationEnd: function(chartContext, config) {
-            if (parseFloat(stat.dataset.conscientiousness) === maxStat) {
+            if (parseFloat(statsInteger[1]) === maxStat) {
               appear(profileAnnouncement);
             }
           }
         },
       },
-      series: [stat.dataset.conscientiousness],
+      series: [statsInteger[1]],
       labels: ['Conscientiousness'],
     }
 
@@ -150,13 +152,13 @@ const displayMbti = () => {
         ...basicOptions.chart,
         events: {
           animationEnd: function(chartContext, config) {
-            if (parseFloat(stat.dataset.extraversion) === maxStat) {
+            if (parseFloat(statsInteger[2]) === maxStat) {
               appear(profileAnnouncement);
             }
           }
         },
       },
-      series: [stat.dataset.extraversion],
+      series: [statsInteger[2]],
       labels: ['Extraversion'],
     }
 
@@ -175,13 +177,13 @@ const displayMbti = () => {
         ...basicOptions.chart,
         events: {
           animationEnd: function(chartContext, config) {
-            if (parseFloat(stat.dataset.agreeableness) === maxStat) {
+            if (parseFloat(statsInteger[3]) === maxStat) {
               appear(profileAnnouncement);
             }
           }
         },
       },
-      series: [stat.dataset.agreeableness],
+      series: [statsInteger[3]],
       labels: ['Agreeableness'],
     }
 
@@ -200,13 +202,13 @@ const displayMbti = () => {
         ...basicOptions.chart,
         events: {
           animationEnd: function(chartContext, config) {
-            if (parseFloat(stat.dataset.emotional_range) === maxStat) {
+            if (parseFloat(statsInteger[4]) === maxStat) {
               appear(profileAnnouncement);
             }
           }
         },
       },
-      series: [stat.dataset.emotional_range],
+      series: [statsInteger[4]],
       labels: ['Emotional range'],
     }
 
