@@ -1,4 +1,9 @@
 <div class="university-body">
+  <div class="add-review-btn test-btn">
+    <%= link_to new_program_review_path(@program) do %>
+      <i class="fas fa-plus"></i>
+    <% end %>
+  </div>
   <h1><%= @program.university.name %></h1>
   <div class="university-image" style="background-image: url('<%= cl_image_path @program.university.photo %>')">
     <%= link_to program_favorites_path(@program), method: :post do %>
@@ -11,7 +16,7 @@
   <div class="tab">
     <div class="tab-left">
       <nav>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <div class="nav nav-tabs first-level" id="nav-tab" role="tablist">
           <a class="nav-item nav-link show active" id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">Description</a>
           <a class="nav-item nav-link" id="nav-courses-tab" data-toggle="tab" href="#nav-courses" role="tab" aria-controls="nav-courses" aria-selected="false">Courses</a>
           <a class="nav-item nav-link" id="nav-requirements-tab" data-toggle="tab" href="#nav-requirements" role="tab" aria-controls="nav-requirements" aria-selected="false">Entry Requirements</a>
@@ -111,7 +116,6 @@
                 <p>you have to login before reviewing</p>
                 <%= link_to "Log in", new_user_session_path %>
              <% elsif policy(Review).new? %>
-              <div class="btn btn-primary"><%= link_to "Add a review", new_program_review_path(@program) %></div>
             <% end %>
           </div>
           <% if @program.reviews.empty? %>

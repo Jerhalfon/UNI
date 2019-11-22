@@ -5,6 +5,7 @@ import Sortable from 'sortablejs';
 import {sliderValue} from "../components/slider";
 import "../components/personality_stat";
 import "../components/description";
+import "../components/button-reviews";
 console.log(sliderValue)
 initMapbox();
 sliderValue();
