@@ -53,7 +53,7 @@ uni6.remote_photo_url = url6
 uni6.save
 
 url7 = "https://www.onlyengineerjobs.be/sites/default/files/ugent-jobs.png"
-uni7 = University.create(name: "Ghent University", location: loca7, address: "Oude Markt 13, 3000 Leuven")
+uni7 = University.create(name: "Ghent University", location: loca7, address: "St. Pietersnieuwstraat 33, 9000 Gent")
 uni7.remote_photo_url = url7
 uni7.save
 
@@ -1078,6 +1078,106 @@ Program.create( university: uni1,
                 level: "Master",
                 duration: 24,
                 description: "The goal of the Master in Public Health is to train public health professionals with a multi-faceted skill profile. Graduates of the programme will be able to draw up, implement, and assess projects related to health care and qualitative and/or quantitative research. They will also be able to manage and analyse databases and make use of health information in decision-making, and will possess the knowledge of epidemiology and methods (in terms of statistics and information technology) required to implement their decisions. They will also be able to provide training in health care management and environmental health. Studying public health involves an interdisciplinary approach: biostatistics, law, economy, sociology, psychology, food sciences, pedagogy, hygiene, epidemiology, management, politics, communication, etc.",
+                application_deadline: "September 30th, 2020",
+                student_profile: "",
+                admission_requirements: "",
+                language: "French"
+)
+
+uni10 = Program.create( university: uni6,
+                category: cat1,
+                name: "Bachelor of Business Administration",
+                price: 938,
+                level: "Bachelor",
+                duration: 36,
+                description: "TThroughout the Bachelor of Business Administration (Brussels) you acquire the necessary skills to solve challenging business problems as well as gain considerable insight into the specific challenges corporate life is facing. You are set for a promising (international) career thanks to your current economic insights, your management capabilities and your language skills.
+
+Structure
+Key features of our Bachelor of Business Administration programme are:
+
+Management of Business Domains
+Economic Analysis and International Orientation
+Entrepreneurship and innovation Professional skills and Employability
+Behaviour, Society and Law
+During each programme stage you will carry out a cross-disciplinary management project. Through this practical experience you will develop specific competences that are important to the business administrator, including entrepreneurship, problem-solving reasoning and critical reflection. At the same time, these projects encourage independence and team spirit.
+
+Strengths
+The Business Administration programme combines scientific knowledge with a business-orientation that fits the day-to-day reality of the business world. This programme offers you a scientific foundation that will help you to think critically and in a problem-solving way. You will take part in education that is practice-oriented and will build skills that will come in handy in a professional context (regarding communication, leadership, independence, and teamwork).
+
+The programme has a strong international focus. Our students participate in exchange programmes with numerous partners both within and outside Europe but also have the possibility to do an exchange within Belgium. Selected students can pursue a double degree with Kedge Business School (Marseille).  More information on the double degree programme can be found on this website.
+
+More information on the various international experiences the faculty has to offer can be found on this website.
+
+Furthermore, the programme offers you the following benefits:
+
+Contact with businesses: During your education you will engage with multiple organisations and international managers via business projects, guest lectures and business seminars.
+Individual approach with sufficient support: Besides different guidance formulas to maximize your chances of success, you can count on individual guidance.
+Centrally located and truly international:  the campus is located in the heart of Brussels, only a five-minute walk from Brussels Central train station, with several metro (underground) connections in the immediate vicinity. You will meet and work closely with students from other cultures and nationalities.The diversity of our programme is impressive: roughly 70 nationalities are represented in the BBA programme. ",
+                application_deadline: "1 March 2020 (for non-EEA citizens)
+1 June 2021 (for EEA citizens)",
+                student_profile: "",
+                admission_requirements: "2020-2021
+Direct
+For admission to this programme, the general admission requirements for a Bachelor's programme apply:
+1° a Flemish degree of secondary education;
+2° a Flemish degree of short-course higher education;
+3° a Flemish degree of higher education for social advancement, with the exception of the certificate of pedagogic aptitude, or
+4° a degree or certificate, awarded in the context of the Flemish HBO;
+5° a degree or certificate which, pursuant to a law, Decree or European guideline or another international agreement, is deemed equivalent to the certificates mentioned in the categories above.
+
+After admission procedure
+KU Leuven may admit candidates who have obtained a degree or certificate in a country that has not ratified the Lisbon Recognition Convention, which is not deemed equivalent as mentioned in 5°. This is only possible on the condition that this document gives admission to a Bachelor's programme in the country where it has been awarded, comparable to a Flemish Bachelor's degree, and on the condition that the degree or certificate in question is authenticated. Candidate students who fall into this category file their application with the Admissions Office KU Leuven.
+
+
+PROOF OF PROFICIENCY IN ENGLISH AND ADDITIONAL REQUIREMENTS
+
+All applicants must prove their English language proficiency by means of an IELTS or TOEFL test. The minimum score for IELTS is 6.5 (with a minimum sub-score of 5.5 for each of the four skills Listening, Writing, Speaking and Reading). The minimum score for TOEFL internet based test is 90 (with a minimum sub-score of 20 for each of the four skills Listening, Writing, Speaking and Reading). Candidates who obtained the CPE Certificate or the CAE Certificate meet the minimum requirement of the English language proficiency as well. An exemption from the proof of English proficiency by means of the above mentioned tests is possible for applicants with a secondary education degree or a higher education degree obtained in Australia, English-speaking Canada, Ireland, New Zealand, United Kingdom or the USA: the certified degree and transcripts suffice, provided they confirm that the entire study was completed in English.
+Students with an Flemish secondary education diploma are also exempted from the English language requirement (no application required).
+
+The above implies that all candidate-students who do not have a diploma of the Flemish Community, file their application with the Admissions Office and that
+
+A. Applicants who have obtained a European Baccalaureate diploma or an International Baccalaureate diploma can be admitted provided they meet the English language proficiency requirements. Applicants holding a European Baccalaureate can be exempted from IELTS or TOEFL if at least 16 course hours per week are taught in the English language (Physical Education not included). Applicants holding an International Baccalaureate can be exempted from IELTS or TOEFL if the entire diploma programme has been completed in English. In order to be successful, a sound basis in mathematics is needed before one starts the programme. Please check here.
+
+B. Applicants who obtained a secondary education degree or university degree awarded by a recognized educational institution from a country that has ratified the Lisbon Recognition Convention can be admitted provided they can be admitted in that country to an equivalent programme as the Bachelor of Business Administration and provided they meet the English language proficiency requirements (cf. supra). In order to be successful, a sound basis in mathematics is needed before one starts the programme. Please check here.
+
+
+C. Applicants who obtained a degree of certificate in a country that has not ratified the Lisbon Recognition Convention can only be admitted to the Bachelor of Business Administration on the condition that this document gives admission to a Bachelor's programme in the country where it has been awarded, comparable to a Flemish Bachelor's degree. In addition these applicants are required:
+> to prove their proficiency in mathematics by submitting a SAT test result with a minimum score of 530 on the mathematics section. Note that the test required is the general SAT test, not a mathematics subject test. Alternatively, ACT test results may be submitted with a minimum score of 21 for the mathematics test. Minimum SAT or ACT test results are not an immediate guarantee for admission, however. Your application file including your previous education qualifications will be evaluated as a whole. Applicants who obtain a score of 570 or higher for SAT or 23 or higher for ACT can register for the fast track of the courses in Mathematics and Statistics. Applicants are responsible to timely make an appointment for one of both tests themselves.
+> to meet the English language proficiency requirements (cf. supra).
+D. Applicants who have been awarded the General Certificate of Education (GCE) can be eligible for admission if they can prove to have passed at least three A-Level subjects. Of these A-Level subjects, at least one has to be relevant (ex. mathematics or business studies). If the GCE A-Level certificates have been obtained in a country that has not ratified the Lisbon Recognition Convention, candidates are required to submit an additional proof of proficiency in mathematics (SAT/ACT, cf. supra). All applicants also need to meet the English language proficiency requirements (cf. supra).
+
+2019-2020
+Direct
+For admission to this programme, the general admission requirements for a Bachelor's programme apply:
+1° a Flemish degree of secondary education;
+2° a Flemish degree of short-course higher education;
+3° a Flemish degree of higher education for social advancement, with the exception of the certificate of pedagogic aptitude, or
+4° a degree or certificate, awarded in the context of the Flemish HBO;
+5° a degree or certificate which, pursuant to a law, Decree or European guideline or another international agreement, is deemed equivalent to the certificates mentioned in the categories above.
+
+After admission procedure
+KU Leuven may admit candidates who have obtained a degree or certificate in a country that has not ratified the Lisbon Recognition Convention, which is not deemed equivalent as mentioned in 5°. This is only possible on the condition that this document gives admission to a Bachelor's programme in the country where it has been awarded, comparable to a Flemish Bachelor's degree, and on the condition that the degree or certificate in question is authenticated. Candidate students who fall into this category file their application with the Admissions Office.
+
+
+PROOF OF PROFICIENCY IN ENGLISH AND ADDITIONAL REQUIREMENTS
+",
+                language: "[Dutch,English]"
+)
+
+uni11 = Program.create( university: uni3,
+                category: cat1,
+                name: "Bachelor in Business engineering",
+                price: 835,
+                level: "Bachelor",
+                duration: 36,
+                description: "Biotechnology, revolutionary materials, social media, mobile applications, new services ... the company is developing in a more dynamic environment than ever before.
+
+To ensure its vision and its strategic approach, the company is looking for employees capable of developing and managing projects, solving management problems in a technological environment, integrating the challenges of competitiveness and increasing globalization.
+
+Management Engineer training combines science with management skills and enables you to achieve key roles in the business world.
+
+'Here at UNamur, we feel supported in the creation of our projects: founding a student club, gathering people around the same goal ... Do not hesitate to get started! Last year, we organized a conference on the theme 'student and entrepreneur,
+how to combine? '. Our audience was much larger than expected. This event propelled the UStart - Namur' entrepreneurship club of which I am a part. The goal of this club is to promote start-ups on campus and participate in their launch. We are also committed to a 'start-up race' at the level of Belgium. - Edward, student",
                 application_deadline: "September 30th, 2020",
                 student_profile: "",
                 admission_requirements: "",
