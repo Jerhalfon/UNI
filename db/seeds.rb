@@ -119,7 +119,7 @@ a specialisation as a function of your professional objectives and personal tast
 an interdisciplinary approach thanks to the wide range of options in disciplines complementary to economics;
 high-quality instruction within the Economics School of Louvain (ESL), which brings together the UCL and the University of Namur (UNamur);
 the possibility to participate in one of our international masters, with a one-year stay at one of our partner universities (Geneva, Maastricht, Milan, Lisbon, Warsaw).",
-                        application_deadline: "",
+                        application_deadline: "September 24th, 2020",
                         student_profile: "",
                         admission_requirements: "
                         Holders of a first university degree including at least the following subjects :
@@ -179,7 +179,7 @@ Program.create( university: uni7,
                         price: 938,
                         level: "Bachelor" ,
                         duration: 36,
-                        description: "The Bachelor in Bachelor of Business Engineering: Management Information Systems is a demanding programme that aims to train students in all core disciplines and areas relevant to business management. Its key distinguishing features are the size of its first year common core (advanced mandatory courses)—which provides students with a solid base of knowledge and skills—, its strong emphasis on analytical skills, and its multi-disciplinary nature (law, economics, management, communication, and languages)—which provides students with a breadth of tools and approaches to evolve in an increasingly complex and dynamic world. A wide selection of electives in the second year allows students to pursue their intellectual interests in all disciplines of management or apply their skills in a supervised consulting project with partner companies.",
+                        description: "The Bachelor of Business Engineering: Management Information Systems is a demanding programme that aims to train students in all core disciplines and areas relevant to business management. Its key distinguishing features are the size of its first year common core (advanced mandatory courses)—which provides students with a solid base of knowledge and skills—, its strong emphasis on analytical skills, and its multi-disciplinary nature (law, economics, management, communication, and languages)—which provides students with a breadth of tools and approaches to evolve in an increasingly complex and dynamic world. A wide selection of electives in the second year allows students to pursue their intellectual interests in all disciplines of management or apply their skills in a supervised consulting project with partner companies.",
                         application_deadline: "September 26th, 2020",
                         student_profile: "",
                         admission_requirements: "",
@@ -204,6 +204,54 @@ Program.create( university: uni6,
                         course2: [],
                         course3: [],
 )
+
+Program.create( university: uni4,
+                        category: cat1,
+                        name: "Bachelor in Economics and Management",
+                        price: 935,
+                        level: "Bachelor" ,
+                        duration: 36,
+                        description: "This master prepares you for management positions in private and public organisations. It develops your abilities to: integrate management theories and concepts for efficient and controlled use in a professional world; place organisations in their socio-economic and institutional context, to understand the interdependencies between organisation and environment and translate them into management decisions; integrate the challenges of international competition into socially responsible management practices.",
+                        application_deadline: "September 24th, 2020",
+                        student_profile: "",
+                        admission_requirements: "",
+                        language: "French")
+
+Program.create( university: uni4,
+                        category: cat1,
+                        name: "Bachelor in Econometrics",
+                        price: 935,
+                        level: "Bachelor" ,
+                        duration: 36,
+                        description: "Organised in collaboration with the UNamur and the KULeuven and equivalent to the MPhil programmes of foreign universities (UK, Netherlands, for example), the master in economic sciences, econometrics orientation is designed for students who envisage continuing their training with a third cycle (doctorate) and wish to receive in two years a training in research that will enable them to pursue a doctoral thesis project under ideal conditions. The courses are given in English by researchers who propose advanced questions in topics of pure economics.",
+                        application_deadline: "September 24th, 2020",
+                        student_profile: "",
+                        admission_requirements: "",
+                        language: "English")
+
+Program.create( university: uni4,
+                        category: cat1,
+                        name: "Bachelor in Finance",
+                        price: 935,
+                        level: "Bachelor" ,
+                        duration: 36,
+                        description: "The Bachelor in Finance provides training for bachelors and masters in the field of preparation "Economics". Upon completion of the training, students receive a diploma of the state standard of the Finance University under the Government of the Russian Federation, and also have the opportunity to obtain a diploma from one of the prestigious Western partner universities.",
+                        application_deadline: "September 24th, 2020",
+                        student_profile: "",
+                        admission_requirements: "",
+                        language: "French")
+
+Program.create( university: uni4,
+                        category: cat1,
+                        name: "Bachelor in Marketing",
+                        price: 935,
+                        level: "Bachelor" ,
+                        duration: 36,
+                        description: "In 3 years, our Bachelor programmes offer you a generalist training in marketing, communication, management, law, finance and global business. Internationally oriented, our Bachelor can be followed 100% in French or 100% in English. It also offers a great opening to the job market, with a maximum of 13 months working placement periods.",
+                        application_deadline: "September 24th, 2020",
+                        student_profile: "",
+                        admission_requirements: "",
+                        language: "French")
 
 
 Program.create( university: uni4,
@@ -230,7 +278,7 @@ Program.create( university: uni4,
                         language: "French")
 Program.create( university: uni4,
                         category: cat2,
-                        name: "Master in Theology (Louvain-la-Neuve)",
+                        name: "Master in Theology",
                         price: 0,
                         level: "Master" ,
                         duration: 24,
