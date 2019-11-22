@@ -39,8 +39,8 @@
               <div class="card-product-right">
                 <h2><%= link_to program.name, program_path(program) %></h2>
                 <h3><%= program.university.name %></h3>
-                <p><strong>Duration: </strong><%= program.duration %></p>
-                <p><strong>Price: </strong><%= program.price %></p>
+                <p><strong>Duration: </strong><%= program.duration %> months</p>
+                <p><strong>Price: </strong><%= program.price %> €</p>
                 <p><%= program.description[0..440]%></p>
                 <p><strong><%= link_to 'Read more', program_path(program) %></strong></p>
               </div>
