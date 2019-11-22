@@ -43,7 +43,6 @@
   .btn-position {
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
   }
 }
 
@@ -181,4 +180,27 @@
 
 .main-div {
   z-index: 1;
+}
+
+#btn-position:disabled {
+  background-color: #CDD2ED;
+  color: white;
+  cursor: not-allowed;
+}
+
+.count-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+
+  p {
+    color: black;
+    margin: 0;
+  }
+
+  .line-width {
+    width: 33.333%;
+  }
 }

@@ -24,10 +24,13 @@
                         :cols => 50,
                         :input_html => { :minlength => 100 ,
                                           required: true}, error: 'You have to enter at least 100 words' %>
-        <div class="btn-position"><%= f.submit "Submit", value: "Submit", class: "btn-home-form" %></div>
+        <div class="count-button">
+          <div class="line-width"></div>
+          <div class="line-width"><p>Word count: <span id="wordCount">0</span></p></div>
+          <div class="btn-position line-width"><%= f.submit "Submit", value: "Submit", class: "btn-home-form", id: "btn-position", disabled: true %></div>
+        </div>
       <% end %>
     </div>
-    <p>Word count: <span id="wordCount">0</span></p>
   </div>
 </div >
 
