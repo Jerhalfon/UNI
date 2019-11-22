@@ -42,7 +42,7 @@ uni3 = University.create(name: "Université de Namur", location: loca3, address:
 uni3.remote_photo_url = url3
 uni3.save
 
-url4 = "https://images.unsplash.com/photo-1474650919751-b7e21a1b180f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1650&q=80"
+url4 = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Belgique_-_Louvain-la-Neuve_-_Biblioth%C3%A8que_des_Sciences_-_23.jpg/1200px-Belgique_-_Louvain-la-Neuve_-_Biblioth%C3%A8que_des_Sciences_-_23.jpg"
 uni4 = University.create(name: "Université Catholique de Louvain", location: loca5, address: "Place de l'Université 1, 1348 Ottignies-Louvain-la-Neuve")
 uni4.remote_photo_url = url4
 uni4.save
