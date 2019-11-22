@@ -108,7 +108,7 @@ It is up to the programme director to agree all requests for exemption, equivale
 prog2 = Program.create( university: uni4,
                         category: cat1,
                         name: "Bachelor in Economics: General",
-                        price: 0 ,
+                        price: 920 ,
                         level: "Bachelor",
                         duration: 24,
                         description: "The master focuses on the general, specific, personal and openness skills. The offer of specialisations is based on the areas of expertise of the Economics School of Louvain (ESL): growth and globalisation, development, finance, economy and society, economic policy, Firm strategy & Innovation, European Business, Research oriented.
@@ -140,6 +140,71 @@ you wish to acquire skills that give access to high-level professional careers."
                         course1: ["Introduction to microeconomics", "Introduction to macroeconomics", "Economic geography", "Financial accounting", "Economic history: companies, industry, organizations", "Mathematics for management : analysis and linear algebra", "Fundamental knowledge and elements of physics", "Descriptive statistics and elements of probability",],
                         course2: ["Industrial applications of chemistry", "Private law and economic law", "Monetary theory I", "Corporate accounting and financial statement analysis", "Introduction to organizations and social responsibility (Mindful Leadership and CSR Chair)", "Computer science", "Mathematics : Linear algebra II and functions of several variables", "Probability, statistical inference and operational research", "English I", "Dutch I"],
                         course3: ["Tax law", "Psychology and labour law", "Human resources management", "Financial theory", "Marketing management", "Management control", "Introduction to econometrics", "Economic and social development", "Multidisciplinary seminar on science and technology - Communication techniques", "Theory of innovation and entrepreneurship", "English II", "Business Dutch"],)
+
+Program.create( university: uni7,
+                        category: cat1,
+                        name: "Bachelor in Economics",
+                        price: 938,
+                        level: "Bachelor" ,
+                        duration: 36,
+                        description: "The training programme is geared towards the study of social-economic interactions between a variety of different economic actors: households, businesses, financial institutions, the public authorities, other countries. Students are to have an in-depth understanding of the way in which these actors arrive at their decisions and the nature of the implications of the actions issuing therefrom. This requires a thoroughgoing analytical and quantitative foundation, with theoretical understandings being duly tested against reality through empirical work and a critical insight into the institutional environment. Economists are to be duly capable of analysing the impact of the economic choices made, founding their arguments in an appropriately scientifically and socially critical manner.",
+                        application_deadline: "September 26th, 2020",
+                        student_profile: "",
+                        admission_requirements: "",
+                        language: "Dutch"
+                        course1: [],
+                        course2: [],
+                        course3: [],
+)
+
+Program.create( university: uni7,
+                        category: cat1,
+                        name: "Bachelor in Business Administration",
+                        price: 938,
+                        level: "Bachelor" ,
+                        duration: 36,
+                        description: "The bachelor of Science in Commercial Sciences aims to prepare the students for a master in business economics. This does not mean that graduates with a bachelor's degree are not employable with the competences, attitudes and expertise they have acquired. Economics is the backbone of the course. A business administrator needs, first and foremost, a thorough economic training, both in general economics and in business economics.",
+                        application_deadline: "September 26th, 2020",
+                        student_profile: "",
+                        admission_requirements: "",
+                        language: "French"
+                        course1: [],
+                        course2: [],
+                        course3: [],
+)
+
+Program.create( university: uni7,
+                        category: cat1,
+                        name: "Bachelor of Business Engineering: Management Information Systems",
+                        price: 938,
+                        level: "Bachelor" ,
+                        duration: 36,
+                        description: "The Bachelor in Bachelor of Business Engineering: Management Information Systems is a demanding programme that aims to train students in all core disciplines and areas relevant to business management. Its key distinguishing features are the size of its first year common core (advanced mandatory courses)—which provides students with a solid base of knowledge and skills—, its strong emphasis on analytical skills, and its multi-disciplinary nature (law, economics, management, communication, and languages)—which provides students with a breadth of tools and approaches to evolve in an increasingly complex and dynamic world. A wide selection of electives in the second year allows students to pursue their intellectual interests in all disciplines of management or apply their skills in a supervised consulting project with partner companies.",
+                        application_deadline: "September 26th, 2020",
+                        student_profile: "",
+                        admission_requirements: "",
+                        language: "Dutch"
+                        course1: [],
+                        course2: [],
+                        course3: [],
+)
+
+Program.create( university: uni6,
+                        category: cat1,
+                        name: "Banchelor in Financial Engineering",
+                        price: 820,
+                        level: "Bachelor" ,
+                        duration: 36,
+                        description: "This Bachelor’s programme prepares you for a wide array of careers in actuarial science, financial engineering or quantitative risk management in financial institutions. You will learn to construct robust risk models and integrate techniques to report the results of your in-depth analysis, you will study the quantitative instruments necessary to analyze vital contemporary issues.",
+                        application_deadline: "September 26th, 2020",
+                        student_profile: "",
+                        admission_requirements: "",
+                        language: "Dutch"
+                        course1: [],
+                        course2: [],
+                        course3: [],
+)
+
 
 Program.create( university: uni4,
                         category: cat2,
