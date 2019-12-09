@@ -7,13 +7,10 @@ class MbtisController < ApplicationController
     @mbti = Mbti.new
   end
 
-  def intermediary
-    description = params[:mbti][:name]
-    File.open("app/views/mbtis/intermediary.html.erb", 'w') { |file| file.write(description) }
-    redirect_to personnality_path
-  end
-
   def personnality
+
+    description = params[:mbti][:name]
+
     authenticator = Authenticators::IamAuthenticator.new(
       apikey: "v4n7dphTszfiDuchJEaOYEi8_e1kycLbvarM-K3J5GXL"
     )
@@ -23,10 +20,9 @@ class MbtisController < ApplicationController
     )
     personality_insights.service_url = "https://gateway-fra.watsonplatform.net/personality-insights/api"
 
-    File.open("app/views/mbtis/intermediary.html.erb") do |profile_text|
     profile = personality_insights.profile(
       accept: "application/json",
-      content: profile_text.read,
+      content: description,
       content_type: "text/html",
       raw_scores: true
     )
@@ -50,6 +46,6 @@ class MbtisController < ApplicationController
 
 
     @mbti_id = @my_mbti.id
-    end
+    # end
   end
 end

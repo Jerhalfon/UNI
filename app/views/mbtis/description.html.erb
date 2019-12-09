@@ -16,7 +16,7 @@
     <h2>You don’t know what you want to study ? </br>Don’t worry, our personality test will help you.</h2>
     <p>Write down a few sentences about yourself and see the results (minimum 100 words)</p>
     <div class="personality-form">
-      <%= simple_form_for @mbti, method: :get, url: intermediary_path do |f| %>
+      <%= simple_form_for @mbti, method: :get, url: personnality_path do |f| %>
         <%= f.text_area :name,
                         id: "myText",
                         label: "Your description",
